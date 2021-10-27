@@ -1,0 +1,96 @@
+- Which exhibits are located in UoAMuseumRoomA1?
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX geonames: <http://www.geonames.org/ontology#>
+PREFIX meso:<http://i-lab.aegean.gr/kotis/Ontologies/Meso/Meso.owl#>
+SELECT ?x 
+WHERE { 
+?x  geonames:locatedIn meso:UoAMuseumRoomA1
+}
+
+- How many sensors (all kinds) are hosted by IoTmuseumPlatformLG?
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX geonames: <http://www.geonames.org/ontology#>
+PREFIX sosa:<http://www.w3.org/ns/sosa/>
+PREFIX meso:<http://i-lab.aegean.gr/kotis/Ontologies/Meso/Meso.owl#>
+SELECT (COUNT(?x) AS ?numOfSensors)
+WHERE {
+meso:IoTmuseumPlatformLG sosa:hosts ?x
+}
+
+- Which smart lamps have trust value = 0.7 and lights Painting01?
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX geonames: <http://www.geonames.org/ontology#>
+PREFIX sosa:<http://www.w3.org/ns/sosa/>
+PREFIX ioT-trust-onto:<http://i-lab.aegean.gr/kotis/Ontologies/IoT/IoT-trust-onto.owl#>
+PREFIX meso:<http://i-lab.aegean.gr/kotis/Ontologies/Meso/Meso.owl#>
+SELECT ?x
+WHERE {
+?x ioT-trust-onto:hasTrustValue 0.7.
+?x meso:lights meso:Painting01.
+}
+
+- Which rooms have been visited  by Visitor01 visited?
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX geonames: <http://www.geonames.org/ontology#>
+PREFIX sosa:<http://www.w3.org/ns/sosa/>
+PREFIX meso:<http://i-lab.aegean.gr/kotis/Ontologies/Meso/Meso.owl#>
+SELECT ?x 
+WHERE { 
+meso:Visitor01 meso:visits ?x
+}
+
+- What measurements have been made in UoAMuseumRoomA1 on 09/09/2021?
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX geonames: <http://www.geonames.org/ontology#>
+PREFIX sosa:<http://www.w3.org/ns/sosa/>
+PREFIX meso:<http://i-lab.aegean.gr/kotis/Ontologies/Meso/Meso.owl#>
+PREFIX :<http://i-lab.aegean.gr/kotis/Ontologies/SmartMuseumOnto/SmartMuseumOnto.owl#>
+SELECT ?Observations
+WHERE {
+?Observations sosa:hasFeatureOfInterest meso:UoAMuseumRoomA1.
+?Observations sosa:resultTime ?resultTime 
+FILTER(?resultTime="2021-09-09T11:00:12Z"^^xsd:dateTime).
+}
+
+- For observations made for UoAMuseumRoomA1 at 11.00, 11/09/2021, what is the result of humidity measurements?
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX sosa:<http://www.w3.org/ns/sosa/>
+PREFIX meso:<http://i-lab.aegean.gr/kotis/Ontologies/Meso/Meso.owl#>
+PREFIX :<http://i-lab.aegean.gr/kotis/Ontologies/SmartMuseumOnto/SmartMuseumOnto.owl#>
+SELECT ?observation ?humidity
+WHERE {
+?observation sosa:hasFeatureOfInterest meso:UoAMuseumRoomA1.
+?observation sosa:observedProperty :humidityInMuseumRoom.	
+?observation sosa:hasSimpleResult ?humidity.
+?observation sosa:resultTime ?resultTime.
+FILTER(?resultTime="2021-09-11T11:00:12Z"^^xsd:dateTime).
+}
+
+- How many sculptures are located in UoAMuseumRoomA2?
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX geonames: <http://www.geonames.org/ontology#>
+PREFIX sosa:<http://www.w3.org/ns/sosa/>
+PREFIX meso:<http://i-lab.aegean.gr/kotis/Ontologies/Meso/Meso.owl#>
+SELECT (COUNT(?x) AS ?numOfSculptures)
+WHERE {
+?x rdf:type meso:Exhibit_sculpture.
+?x geonames:locatedIn meso:UoAMuseumRoomA2.
+}

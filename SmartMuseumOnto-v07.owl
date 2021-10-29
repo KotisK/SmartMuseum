@@ -1,314 +1,682 @@
-Prefix(:=<http://i-lab.aegean.gr/kotis/Ontologies/SmartMuseumOnto/SmartMuseumOnto.owl#>)
-Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
-Prefix(td:=<https://www.w3.org/2019/wot/td#>)
-Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
-Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
-Prefix(smo:=<http://i-lab.aegean.gr/kotis/Ontologies/SmartMuseumOnto/SmartMuseumOnto.owl#>)
-Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
-Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
-Prefix(foaf:=<http://xmlns.com/foaf/0.1/>)
-Prefix(meso:=<http://i-lab.aegean.gr/kotis/Ontologies/Meso/Meso.owl#>)
-Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
-Prefix(skos:=<http://www.w3.org/2004/02/skos/core#>)
-Prefix(sosa:=<http://www.w3.org/ns/sosa/>)
-Prefix(swrl:=<http://www.w3.org/2003/11/swrl#>)
-Prefix(vann:=<http://purl.org/vocab/vann/>)
-Prefix(swrlb:=<http://www.w3.org/2003/11/swrlb#>)
-Prefix(terms:=<http://purl.org/dc/terms/>)
-Prefix(schema:=<http://schema.org/>)
-Prefix(IoT-trust-onto:=<http://i-lab.aegean.gr/kotis/Ontologies/IoT/IoT-trust-onto.owl#>)
-
-
-Ontology(<http://i-lab.aegean.gr/kotis/Ontologies/SmartMuseumOnto/SmartMuseumOnto.owl>
-<http://i-lab.aegean.gr/kotis/Ontologies/SmartMuseumOnto/SmartMuseumOnto-v07.owl>
-Import(<http://i-lab.aegean.gr/kotis/Ontologies/IoT/IoT-trust-onto-v06.owl>)
-Import(<http://i-lab.aegean.gr/kotis/Ontologies/Meso/Meso-v07.owl>)
-Import(<http://www.w3.org/ns/sosa/>)
-Import(<http://www.w3.org/ns/ssn/>)
-Annotation(terms:contributor "Kotis K.")
-Annotation(terms:creator "Zachila K.")
-Annotation(rdfs:comment "The aim of the ontology is to represent the knowledge related to a smart museum in order to fulfil the following objectives. The specific objectives of the ontology are: a) to represent the knowledge related to trustworthy IoT entities that deployed in smart cultural spaces i.e., things, sensors, actuators, people, data, applications b) to deal with the semantic interoperability and integration of \"smart\" museum applications and data c) to represent knowledge related to museum visits and visitors towards enhancing visiting experience d) to represent knowledge related to energy saving e) to represent knowledge related to the monitoring of environmental conditions in museums f) to represent knowledge related to the space and location of exhibits and collections")
-Annotation(rdfs:label "Smart Museum"@en)
-Annotation(owl:versionInfo "version 0.7")
-
-Declaration(Class(smo:ActivateHeatObservation))
-Declaration(Class(smo:ActivateHumObservation))
-Declaration(Class(smo:Dehumidifier))
-Declaration(Class(smo:Heater))
-Declaration(Class(smo:HumSensor))
-Declaration(Class(smo:Humidity))
-Declaration(Class(smo:IndoorHumidity))
-Declaration(Class(smo:MuseumRoomHumObservation))
-Declaration(Class(smo:NoSuggestedExhibitProximityObservation))
-Declaration(Class(smo:OutdoorHumidity))
-Declaration(Class(smo:RoomHumidity))
-Declaration(Class(smo:SuggestedExhibitProximityObservation))
-Declaration(Class(smo:TrustedObservations))
-Declaration(Class(td:Thing))
-Declaration(NamedIndividual(smo:LGhumSensor01))
-Declaration(NamedIndividual(smo:exhibitProximityObservation0007))
-Declaration(NamedIndividual(smo:humidityInMuseumRoom))
-Declaration(NamedIndividual(smo:museumRoomHumObservation0001))
-Declaration(NamedIndividual(smo:museumRoomHumObservation0002))
-Declaration(NamedIndividual(smo:museumRoomHumObservation0003))
-Declaration(NamedIndividual(smo:museumRoomHumObservation0004))
-Declaration(NamedIndividual(smo:proximityExhibit06))
-Declaration(NamedIndividual(smo:proximitySensor06))
-Declaration(AnnotationProperty(sosa:hasFeatureOfInterest))
-Declaration(AnnotationProperty(sosa:hasSimpleResult))
-Declaration(AnnotationProperty(sosa:hosts))
-Declaration(AnnotationProperty(sosa:madeBySensor))
-Declaration(AnnotationProperty(sosa:observedProperty))
-Declaration(AnnotationProperty(sosa:observes))
-Declaration(AnnotationProperty(sosa:resultTime))
-
-############################
-#   Object Properties
-############################
-
-# Object Property: sosa:hasSample (has sample)
-
-SubObjectPropertyOf(sosa:hasSample sosa:hasResult)
-
-# Object Property: sosa:madeObservation (made observation)
-
-SubObjectPropertyOf(sosa:madeObservation sosa:madeBySensor)
-
-# Object Property: sosa:phenomenonTime (phenomenon time)
-
-SubObjectPropertyOf(sosa:phenomenonTime sosa:isResultOf)
-
-
-
-
-############################
-#   Classes
-############################
-
-# Class: smo:ActivateHeatObservation (smo:ActivateHeatObservation)
-
-AnnotationAssertion(dc:creator smo:ActivateHeatObservation "Zachila K.")
-SubClassOf(smo:ActivateHeatObservation sosa:Observation)
-
-# Class: smo:ActivateHumObservation (smo:ActivateHumObservation)
-
-AnnotationAssertion(dc:creator smo:ActivateHumObservation "Zachila K.")
-SubClassOf(smo:ActivateHumObservation sosa:Observation)
-
-# Class: smo:Dehumidifier (smo:Dehumidifier)
-
-AnnotationAssertion(dc:creator smo:Dehumidifier "Zachila K.")
-SubClassOf(smo:Dehumidifier td:Thing)
-
-# Class: smo:Heater (smo:Heater)
-
-AnnotationAssertion(dc:creator smo:Heater "Zachila K.")
-SubClassOf(smo:Heater td:Thing)
-
-# Class: smo:HumSensor (smo:HumSensor)
-
-SubClassOf(smo:HumSensor sosa:Sensor)
-SubClassOf(smo:HumSensor ObjectSomeValuesFrom(sosa:observes smo:Humidity))
-
-# Class: smo:Humidity (smo:Humidity)
-
-AnnotationAssertion(dc:creator smo:Humidity "Zachila K.")
-SubClassOf(smo:Humidity sosa:ObservableProperty)
-
-# Class: smo:IndoorHumidity (smo:IndoorHumidity)
-
-AnnotationAssertion(dc:creator smo:IndoorHumidity "Zachila K.")
-SubClassOf(smo:IndoorHumidity smo:Humidity)
-
-# Class: smo:MuseumRoomHumObservation (smo:MuseumRoomHumObservation)
-
-SubClassOf(smo:MuseumRoomHumObservation sosa:Observation)
-
-# Class: smo:NoSuggestedExhibitProximityObservation (smo:NoSuggestedExhibitProximityObservation)
-
-SubClassOf(smo:NoSuggestedExhibitProximityObservation sosa:Observation)
-
-# Class: smo:OutdoorHumidity (smo:OutdoorHumidity)
-
-AnnotationAssertion(dc:creator smo:OutdoorHumidity "Zachila K.")
-SubClassOf(smo:OutdoorHumidity smo:Humidity)
-
-# Class: smo:RoomHumidity (smo:RoomHumidity)
-
-AnnotationAssertion(dc:creator smo:RoomHumidity "Zachila K.")
-SubClassOf(smo:RoomHumidity smo:IndoorHumidity)
-
-# Class: smo:SuggestedExhibitProximityObservation (smo:SuggestedExhibitProximityObservation)
-
-SubClassOf(smo:SuggestedExhibitProximityObservation sosa:Observation)
-
-# Class: smo:TrustedObservations (smo:TrustedObservations)
-
-SubClassOf(smo:TrustedObservations sosa:Observation)
-
-# Class: <https://saref.etsi.org/saref4bldg/Lamp> (<https://saref.etsi.org/saref4bldg/Lamp>)
-
-SubClassOf(<https://saref.etsi.org/saref4bldg/Lamp> td:Thing)
-
-# Class: td:Thing (td:Thing)
-
-AnnotationAssertion(rdfs:comment td:Thing "Fom W3C WoT TD vocabulary
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://i-lab.aegean.gr/kotis/Ontologies/SmartMuseumOnto/SmartMuseumOnto.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://i-lab.aegean.gr/kotis/Ontologies/SmartMuseumOnto/SmartMuseumOnto.owl"
+     versionIRI="http://i-lab.aegean.gr/kotis/Ontologies/SmartMuseumOnto/SmartMuseumOnto-v07.owl">
+    <Prefix name="" IRI="http://i-lab.aegean.gr/kotis/Ontologies/SmartMuseumOnto/SmartMuseumOnto.owl#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="td" IRI="https://www.w3.org/2019/wot/td#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="smo" IRI="http://i-lab.aegean.gr/kotis/Ontologies/SmartMuseumOnto/SmartMuseumOnto.owl#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Prefix name="meso" IRI="http://i-lab.aegean.gr/kotis/Ontologies/Meso/Meso.owl#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
+    <Prefix name="sosa" IRI="http://www.w3.org/ns/sosa/"/>
+    <Prefix name="swrl" IRI="http://www.w3.org/2003/11/swrl#"/>
+    <Prefix name="vann" IRI="http://purl.org/vocab/vann/"/>
+    <Prefix name="swrlb" IRI="http://www.w3.org/2003/11/swrlb#"/>
+    <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
+    <Prefix name="schema" IRI="http://schema.org/"/>
+    <Prefix name="IoT-trust-onto" IRI="http://i-lab.aegean.gr/kotis/Ontologies/IoT/IoT-trust-onto.owl#"/>
+    <Import>http://i-lab.aegean.gr/kotis/Ontologies/IoT/IoT-trust-onto-v06.owl</Import>
+    <Import>http://i-lab.aegean.gr/kotis/Ontologies/Meso/Meso-v07.owl</Import>
+    <Import>http://www.w3.org/ns/sosa/</Import>
+    <Import>http://www.w3.org/ns/ssn/</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:contributor"/>
+        <Literal>Kotis K.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:creator"/>
+        <Literal>Zachila K.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>The aim of the ontology is to represent the knowledge related to a smart museum in order to fulfil the following objectives. The specific objectives of the ontology are: a) to represent the knowledge related to trustworthy IoT entities that deployed in smart cultural spaces i.e., things, sensors, actuators, people, data, applications b) to deal with the semantic interoperability and integration of &quot;smart&quot; museum applications and data c) to represent knowledge related to museum visits and visitors towards enhancing visiting experience d) to represent knowledge related to energy saving e) to represent knowledge related to the monitoring of environmental conditions in museums f) to represent knowledge related to the space and location of exhibits and collections</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="en">Smart Museum</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal>version 0.7</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#ActivateHeatObservation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ActivateHumObservation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dehumidifier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Heater"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HumSensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Humidity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IndoorHumidity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MuseumRoomHumObservation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NoSuggestedExhibitProximityObservation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OutdoorHumidity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RoomHumidity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SuggestedExhibitProximityObservation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TrustedObservations"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="td:Thing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LGhumSensor01"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#exhibitProximityObservation0007"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#humidityInMuseumRoom"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#museumRoomHumObservation0001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#museumRoomHumObservation0002"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#museumRoomHumObservation0003"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#museumRoomHumObservation0004"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#proximityExhibit06"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#proximitySensor06"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="sosa:hasFeatureOfInterest"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="sosa:hasSimpleResult"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="sosa:hosts"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="sosa:madeBySensor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="sosa:observedProperty"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="sosa:observes"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="sosa:resultTime"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#ActivateHeatObservation"/>
+        <Class abbreviatedIRI="sosa:Observation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActivateHumObservation"/>
+        <Class abbreviatedIRI="sosa:Observation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dehumidifier"/>
+        <Class abbreviatedIRI="td:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Heater"/>
+        <Class abbreviatedIRI="td:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HumSensor"/>
+        <Class abbreviatedIRI="sosa:Sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HumSensor"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="sosa:observes"/>
+            <Class IRI="#Humidity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Humidity"/>
+        <Class abbreviatedIRI="sosa:ObservableProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IndoorHumidity"/>
+        <Class IRI="#Humidity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MuseumRoomHumObservation"/>
+        <Class abbreviatedIRI="sosa:Observation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NoSuggestedExhibitProximityObservation"/>
+        <Class abbreviatedIRI="sosa:Observation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OutdoorHumidity"/>
+        <Class IRI="#Humidity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RoomHumidity"/>
+        <Class IRI="#IndoorHumidity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SuggestedExhibitProximityObservation"/>
+        <Class abbreviatedIRI="sosa:Observation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrustedObservations"/>
+        <Class abbreviatedIRI="sosa:Observation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://saref.etsi.org/saref4bldg/Lamp"/>
+        <Class abbreviatedIRI="td:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="td:Thing"/>
+        <Class IRI="http://purl.org/IoT/iot#IoT-Entity"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class abbreviatedIRI="IoT-trust-onto:TrustworthinessObject"/>
+        <NamedIndividual abbreviatedIRI="meso:SmartLamp1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="IoT-trust-onto:TrustworthinessObject"/>
+        <NamedIndividual abbreviatedIRI="meso:SmartLamp2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="IoT-trust-onto:TrustworthinessObject"/>
+        <NamedIndividual abbreviatedIRI="meso:SmartLamp4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="IoT-trust-onto:TrustworthinessObject"/>
+        <NamedIndividual abbreviatedIRI="meso:SmartLamp5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="IoT-trust-onto:TrustworthinessObject"/>
+        <NamedIndividual abbreviatedIRI="meso:SmartLamp7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="IoT-trust-onto:TrustworthinessObject"/>
+        <NamedIndividual abbreviatedIRI="meso:SmartLamp8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://purl.org/CONON#Context-Entity"/>
+        <NamedIndividual abbreviatedIRI="meso:UoAMuseumRoomA1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#HumSensor"/>
+        <NamedIndividual IRI="#LGhumSensor01"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="meso:ExhibitProximityObservation"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0007"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RoomHumidity"/>
+        <NamedIndividual IRI="#humidityInMuseumRoom"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MuseumRoomHumObservation"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MuseumRoomHumObservation"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MuseumRoomHumObservation"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0003"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MuseumRoomHumObservation"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0004"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="meso:ExhibitProximity"/>
+        <NamedIndividual IRI="#proximityExhibit06"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="meso:ProxSensor"/>
+        <NamedIndividual IRI="#proximitySensor06"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:observes"/>
+        <NamedIndividual IRI="#LGhumSensor01"/>
+        <NamedIndividual IRI="#humidityInMuseumRoom"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasFeatureOfInterest"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0001"/>
+        <NamedIndividual abbreviatedIRI="meso:UoAMuseumRoomA1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeBySensor"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0001"/>
+        <NamedIndividual IRI="#LGhumSensor01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:observedProperty"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0001"/>
+        <NamedIndividual IRI="#humidityInMuseumRoom"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasFeatureOfInterest"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0002"/>
+        <NamedIndividual abbreviatedIRI="meso:UoAMuseumRoomA1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeBySensor"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0002"/>
+        <NamedIndividual IRI="#LGhumSensor01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:observedProperty"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0002"/>
+        <NamedIndividual IRI="#humidityInMuseumRoom"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasFeatureOfInterest"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0003"/>
+        <NamedIndividual abbreviatedIRI="meso:UoAMuseumRoomA1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeBySensor"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0003"/>
+        <NamedIndividual IRI="#LGhumSensor01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:observedProperty"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0003"/>
+        <NamedIndividual IRI="#humidityInMuseumRoom"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasFeatureOfInterest"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0004"/>
+        <NamedIndividual abbreviatedIRI="meso:UoAMuseumRoomA1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeBySensor"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0004"/>
+        <NamedIndividual IRI="#LGhumSensor01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:observedProperty"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0004"/>
+        <NamedIndividual IRI="#humidityInMuseumRoom"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="IoT-trust-onto:hasTrustValue"/>
+        <NamedIndividual abbreviatedIRI="meso:SmartLamp1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="IoT-trust-onto:hasTrustValue"/>
+        <NamedIndividual abbreviatedIRI="meso:SmartLamp2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="IoT-trust-onto:hasTrustValue"/>
+        <NamedIndividual abbreviatedIRI="meso:SmartLamp3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="IoT-trust-onto:hasTrustValue"/>
+        <NamedIndividual abbreviatedIRI="meso:SmartLamp4"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="IoT-trust-onto:hasTrustValue"/>
+        <NamedIndividual abbreviatedIRI="meso:SmartLamp5"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="IoT-trust-onto:hasTrustValue"/>
+        <NamedIndividual abbreviatedIRI="meso:SmartLamp6"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="IoT-trust-onto:hasTrustValue"/>
+        <NamedIndividual abbreviatedIRI="meso:SmartLamp7"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="IoT-trust-onto:hasTrustValue"/>
+        <NamedIndividual abbreviatedIRI="meso:SmartLamp8"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="IoT-trust-onto:hasTrustValue"/>
+        <NamedIndividual abbreviatedIRI="meso:exhibitProximityObservation0001"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="meso:brighteningLevel"/>
+        <NamedIndividual abbreviatedIRI="meso:exhibitProximityObservation0001"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="IoT-trust-onto:hasTrustValue"/>
+        <NamedIndividual abbreviatedIRI="meso:exhibitProximityObservation0002"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="IoT-trust-onto:hasTrustValue"/>
+        <NamedIndividual abbreviatedIRI="meso:exhibitProximityObservation0003"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="IoT-trust-onto:hasTrustValue"/>
+        <NamedIndividual abbreviatedIRI="meso:exhibitProximityObservation0004"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="IoT-trust-onto:hasTrustValue"/>
+        <NamedIndividual abbreviatedIRI="meso:exhibitProximityObservation0005"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="IoT-trust-onto:hasTrustValue"/>
+        <NamedIndividual abbreviatedIRI="meso:exhibitProximityObservation0006"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="IoT-trust-onto:hasTrustValue"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0007"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="meso:brighteningLevel"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0007"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="meso:nearByVisitors"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0007"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:hasSimpleResult"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0001"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">58.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:resultTime"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0001"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-09T11:00:12Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:hasSimpleResult"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0002"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">50.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:resultTime"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0002"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-10T11:00:12Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:hasSimpleResult"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0003"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">58.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:resultTime"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0003"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-11T11:00:12Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:hasSimpleResult"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0004"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">60.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:resultTime"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0004"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-11T11:00:12Z</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="sosa:hasSample"/>
+        <ObjectProperty abbreviatedIRI="sosa:hasResult"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="sosa:madeObservation"/>
+        <ObjectProperty abbreviatedIRI="sosa:madeBySensor"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="sosa:phenomenonTime"/>
+        <ObjectProperty abbreviatedIRI="sosa:isResultOf"/>
+    </SubObjectPropertyOf>
+    <DLSafeRule>
+        <Body>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="meso:nearByVisitors"/>
+                <Variable IRI="urn:swrl:var#observation"/>
+                <Variable IRI="urn:swrl:var#numOfVisitorsNearExhibit"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:equal">
+                <Variable IRI="urn:swrl:var#numOfVisitorsNearExhibit"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#NoSuggestedExhibitProximityObservation"/>
+                <Variable IRI="urn:swrl:var#observation"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <BuiltInAtom abbreviatedIRI="swrlb:greaterThan">
+                <Variable IRI="urn:swrl:var#numOfVisitorsNearExhibit"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="meso:nearByVisitors"/>
+                <Variable IRI="urn:swrl:var#observation"/>
+                <Variable IRI="urn:swrl:var#numOfVisitorsNearExhibit"/>
+            </DataPropertyAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#SuggestedExhibitProximityObservation"/>
+                <Variable IRI="urn:swrl:var#observation"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="sosa:hasSimpleResult"/>
+                <Variable IRI="urn:swrl:var#observation"/>
+                <Variable IRI="urn:swrl:var#humidity"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:greaterThan">
+                <Variable IRI="urn:swrl:var#humidity"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">55.0</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#ActivateHumObservation"/>
+                <Variable IRI="urn:swrl:var#observation"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <BuiltInAtom abbreviatedIRI="swrlb:lessThan">
+                <Variable IRI="urn:swrl:var#temperature"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">18</Literal>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="sosa:hasSimpleResult"/>
+                <Variable IRI="urn:swrl:var#observation"/>
+                <Variable IRI="urn:swrl:var#temperature"/>
+            </DataPropertyAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#ActivateHeatObservation"/>
+                <Variable IRI="urn:swrl:var#observation"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sosa:hosts"/>
+        <AbbreviatedIRI>meso:IoTmuseumPlatformLG</AbbreviatedIRI>
+        <IRI>http://www.semanticweb.org/ntina/ontologies/2021/9/SmartMuseumOnto#LGhumSensor01</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>meso:SmartLamp1</AbbreviatedIRI>
+        <Literal>current status of the lamp (on|off)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>meso:SmartLamp2</AbbreviatedIRI>
+        <Literal>current status of the lamp (on|off)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>meso:SmartLamp3</AbbreviatedIRI>
+        <Literal>current status of the lamp (on|off)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>meso:SmartLamp4</AbbreviatedIRI>
+        <Literal>current status of the lamp (on|off)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>meso:SmartLamp5</AbbreviatedIRI>
+        <Literal>current status of the lamp (on|off)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>meso:SmartLamp6</AbbreviatedIRI>
+        <Literal>current status of the lamp (on|off)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>meso:SmartLamp7</AbbreviatedIRI>
+        <Literal>current status of the lamp (on|off)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>meso:SmartLamp8</AbbreviatedIRI>
+        <Literal>current status of the lamp (on|off)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#ActivateHeatObservation</IRI>
+        <Literal>Zachila K.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#ActivateHumObservation</IRI>
+        <Literal>Zachila K.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#Dehumidifier</IRI>
+        <Literal>Zachila K.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#Heater</IRI>
+        <Literal>Zachila K.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#Humidity</IRI>
+        <Literal>Zachila K.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#IndoorHumidity</IRI>
+        <Literal>Zachila K.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#OutdoorHumidity</IRI>
+        <Literal>Zachila K.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#RoomHumidity</IRI>
+        <Literal>Zachila K.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sosa:hasFeatureOfInterest"/>
+        <IRI>#exhibitProximityObservation0007</IRI>
+        <AbbreviatedIRI>meso:sculpture03</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sosa:madeBySensor"/>
+        <IRI>#exhibitProximityObservation0007</IRI>
+        <IRI>#proximitySensor06</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sosa:observedProperty"/>
+        <IRI>#exhibitProximityObservation0007</IRI>
+        <IRI>#proximityExhibit06</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sosa:observedProperty"/>
+        <IRI>#exhibitProximityObservation0007</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-01-15T09:00:12Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sosa:observes"/>
+        <IRI>#proximitySensor06</IRI>
+        <IRI>#proximityExhibit06</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>td:Thing</AbbreviatedIRI>
+        <Literal xml:lang="en">Fom W3C WoT TD vocabulary
 
 https://www.w3.org/2019/wot/td#classes
 IRI: https://www.w3.org/2019/wot/td#Thing
 
-An abstraction of a physical or a virtual entity whose metadata and interfaces are described by a WoT Thing Description, whereas a virtual entity is the composition of one or more Things."@en)
-SubClassOf(td:Thing <http://purl.org/IoT/iot#IoT-Entity>)
+An abstraction of a physical or a virtual entity whose metadata and interfaces are described by a WoT Thing Description, whereas a virtual entity is the composition of one or more Things.</Literal>
+    </AnnotationAssertion>
+</Ontology>
 
 
-############################
-#   Named Individuals
-############################
 
-# Individual: meso:SmartLamp1 (meso:SmartLamp1)
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
-AnnotationAssertion(rdfs:comment meso:SmartLamp1 "current status of the lamp (on|off)")
-ClassAssertion(IoT-trust-onto:TrustworthinessObject meso:SmartLamp1)
-DataPropertyAssertion(IoT-trust-onto:hasTrustValue meso:SmartLamp1 "0.7"^^xsd:decimal)
-
-# Individual: meso:SmartLamp2 (meso:SmartLamp2)
-
-AnnotationAssertion(rdfs:comment meso:SmartLamp2 "current status of the lamp (on|off)")
-ClassAssertion(IoT-trust-onto:TrustworthinessObject meso:SmartLamp2)
-DataPropertyAssertion(IoT-trust-onto:hasTrustValue meso:SmartLamp2 "0.6"^^xsd:decimal)
-
-# Individual: meso:SmartLamp3 (meso:SmartLamp3)
-
-AnnotationAssertion(rdfs:comment meso:SmartLamp3 "current status of the lamp (on|off)")
-DataPropertyAssertion(IoT-trust-onto:hasTrustValue meso:SmartLamp3 "0.5"^^xsd:decimal)
-
-# Individual: meso:SmartLamp4 (meso:SmartLamp4)
-
-AnnotationAssertion(rdfs:comment meso:SmartLamp4 "current status of the lamp (on|off)")
-ClassAssertion(IoT-trust-onto:TrustworthinessObject meso:SmartLamp4)
-DataPropertyAssertion(IoT-trust-onto:hasTrustValue meso:SmartLamp4 "0.7"^^xsd:decimal)
-
-# Individual: meso:SmartLamp5 (meso:SmartLamp5)
-
-AnnotationAssertion(rdfs:comment meso:SmartLamp5 "current status of the lamp (on|off)")
-ClassAssertion(IoT-trust-onto:TrustworthinessObject meso:SmartLamp5)
-DataPropertyAssertion(IoT-trust-onto:hasTrustValue meso:SmartLamp5 "0.8"^^xsd:decimal)
-
-# Individual: meso:SmartLamp6 (meso:SmartLamp6)
-
-AnnotationAssertion(rdfs:comment meso:SmartLamp6 "current status of the lamp (on|off)")
-DataPropertyAssertion(IoT-trust-onto:hasTrustValue meso:SmartLamp6 "0.4"^^xsd:decimal)
-
-# Individual: meso:SmartLamp7 (meso:SmartLamp7)
-
-AnnotationAssertion(rdfs:comment meso:SmartLamp7 "current status of the lamp (on|off)")
-ClassAssertion(IoT-trust-onto:TrustworthinessObject meso:SmartLamp7)
-DataPropertyAssertion(IoT-trust-onto:hasTrustValue meso:SmartLamp7 "0.6"^^xsd:decimal)
-
-# Individual: meso:SmartLamp8 (meso:SmartLamp8)
-
-AnnotationAssertion(rdfs:comment meso:SmartLamp8 "current status of the lamp (on|off)")
-ClassAssertion(IoT-trust-onto:TrustworthinessObject meso:SmartLamp8)
-DataPropertyAssertion(IoT-trust-onto:hasTrustValue meso:SmartLamp8 "0.7"^^xsd:decimal)
-
-# Individual: meso:UoAMuseumRoomA1 (meso:UoAMuseumRoomA1)
-
-ClassAssertion(<http://purl.org/CONON#Context-Entity> meso:UoAMuseumRoomA1)
-
-# Individual: meso:exhibitProximityObservation0001 (meso:exhibitProximityObservation0001)
-
-DataPropertyAssertion(IoT-trust-onto:hasTrustValue meso:exhibitProximityObservation0001 "0.7"^^xsd:decimal)
-DataPropertyAssertion(meso:brighteningLevel meso:exhibitProximityObservation0001 "Medium"^^xsd:string)
-
-# Individual: meso:exhibitProximityObservation0002 (meso:exhibitProximityObservation0002)
-
-DataPropertyAssertion(IoT-trust-onto:hasTrustValue meso:exhibitProximityObservation0002 "0.6"^^xsd:decimal)
-
-# Individual: meso:exhibitProximityObservation0003 (meso:exhibitProximityObservation0003)
-
-DataPropertyAssertion(IoT-trust-onto:hasTrustValue meso:exhibitProximityObservation0003 "0.5"^^xsd:decimal)
-
-# Individual: meso:exhibitProximityObservation0004 (meso:exhibitProximityObservation0004)
-
-DataPropertyAssertion(IoT-trust-onto:hasTrustValue meso:exhibitProximityObservation0004 "0.7"^^xsd:decimal)
-
-# Individual: meso:exhibitProximityObservation0005 (meso:exhibitProximityObservation0005)
-
-DataPropertyAssertion(IoT-trust-onto:hasTrustValue meso:exhibitProximityObservation0005 "0.4"^^xsd:decimal)
-
-# Individual: meso:exhibitProximityObservation0006 (meso:exhibitProximityObservation0006)
-
-DataPropertyAssertion(IoT-trust-onto:hasTrustValue meso:exhibitProximityObservation0006 "0.8"^^xsd:decimal)
-
-# Individual: smo:LGhumSensor01 (smo:LGhumSensor01)
-
-ClassAssertion(smo:HumSensor smo:LGhumSensor01)
-ObjectPropertyAssertion(sosa:observes smo:LGhumSensor01 smo:humidityInMuseumRoom)
-
-# Individual: smo:exhibitProximityObservation0007 (smo:exhibitProximityObservation0007)
-
-AnnotationAssertion(sosa:hasFeatureOfInterest smo:exhibitProximityObservation0007 meso:sculpture03)
-AnnotationAssertion(sosa:madeBySensor smo:exhibitProximityObservation0007 smo:proximitySensor06)
-AnnotationAssertion(sosa:observedProperty smo:exhibitProximityObservation0007 smo:proximityExhibit06)
-AnnotationAssertion(sosa:observedProperty smo:exhibitProximityObservation0007 "2021-01-15T09:00:12Z"^^xsd:dateTime)
-ClassAssertion(meso:ExhibitProximityObservation smo:exhibitProximityObservation0007)
-DataPropertyAssertion(IoT-trust-onto:hasTrustValue smo:exhibitProximityObservation0007 "0.6"^^xsd:decimal)
-DataPropertyAssertion(meso:brighteningLevel smo:exhibitProximityObservation0007 "Medium")
-DataPropertyAssertion(meso:nearByVisitors smo:exhibitProximityObservation0007 "0"^^xsd:integer)
-
-# Individual: smo:humidityInMuseumRoom (smo:humidityInMuseumRoom)
-
-ClassAssertion(smo:RoomHumidity smo:humidityInMuseumRoom)
-
-# Individual: smo:museumRoomHumObservation0001 (smo:museumRoomHumObservation0001)
-
-ClassAssertion(smo:MuseumRoomHumObservation smo:museumRoomHumObservation0001)
-ObjectPropertyAssertion(sosa:hasFeatureOfInterest smo:museumRoomHumObservation0001 meso:UoAMuseumRoomA1)
-ObjectPropertyAssertion(sosa:madeBySensor smo:museumRoomHumObservation0001 smo:LGhumSensor01)
-ObjectPropertyAssertion(sosa:observedProperty smo:museumRoomHumObservation0001 smo:humidityInMuseumRoom)
-DataPropertyAssertion(sosa:hasSimpleResult smo:museumRoomHumObservation0001 "58.0"^^xsd:double)
-DataPropertyAssertion(sosa:resultTime smo:museumRoomHumObservation0001 "2021-09-09T11:00:12Z"^^xsd:dateTime)
-
-# Individual: smo:museumRoomHumObservation0002 (smo:museumRoomHumObservation0002)
-
-ClassAssertion(smo:MuseumRoomHumObservation smo:museumRoomHumObservation0002)
-ObjectPropertyAssertion(sosa:hasFeatureOfInterest smo:museumRoomHumObservation0002 meso:UoAMuseumRoomA1)
-ObjectPropertyAssertion(sosa:madeBySensor smo:museumRoomHumObservation0002 smo:LGhumSensor01)
-ObjectPropertyAssertion(sosa:observedProperty smo:museumRoomHumObservation0002 smo:humidityInMuseumRoom)
-DataPropertyAssertion(sosa:hasSimpleResult smo:museumRoomHumObservation0002 "50.0"^^xsd:double)
-DataPropertyAssertion(sosa:resultTime smo:museumRoomHumObservation0002 "2021-09-10T11:00:12Z"^^xsd:dateTime)
-
-# Individual: smo:museumRoomHumObservation0003 (smo:museumRoomHumObservation0003)
-
-ClassAssertion(smo:MuseumRoomHumObservation smo:museumRoomHumObservation0003)
-ObjectPropertyAssertion(sosa:hasFeatureOfInterest smo:museumRoomHumObservation0003 meso:UoAMuseumRoomA1)
-ObjectPropertyAssertion(sosa:madeBySensor smo:museumRoomHumObservation0003 smo:LGhumSensor01)
-ObjectPropertyAssertion(sosa:observedProperty smo:museumRoomHumObservation0003 smo:humidityInMuseumRoom)
-DataPropertyAssertion(sosa:hasSimpleResult smo:museumRoomHumObservation0003 "58.0"^^xsd:double)
-DataPropertyAssertion(sosa:resultTime smo:museumRoomHumObservation0003 "2021-09-11T11:00:12Z"^^xsd:dateTime)
-
-# Individual: smo:museumRoomHumObservation0004 (smo:museumRoomHumObservation0004)
-
-ClassAssertion(smo:MuseumRoomHumObservation smo:museumRoomHumObservation0004)
-ObjectPropertyAssertion(sosa:hasFeatureOfInterest smo:museumRoomHumObservation0004 meso:UoAMuseumRoomA1)
-ObjectPropertyAssertion(sosa:madeBySensor smo:museumRoomHumObservation0004 smo:LGhumSensor01)
-ObjectPropertyAssertion(sosa:observedProperty smo:museumRoomHumObservation0004 smo:humidityInMuseumRoom)
-DataPropertyAssertion(sosa:hasSimpleResult smo:museumRoomHumObservation0004 "60.0"^^xsd:double)
-DataPropertyAssertion(sosa:resultTime smo:museumRoomHumObservation0004 "2021-09-11T11:00:12Z"^^xsd:dateTime)
-
-# Individual: smo:proximityExhibit06 (smo:proximityExhibit06)
-
-ClassAssertion(meso:ExhibitProximity smo:proximityExhibit06)
-
-# Individual: smo:proximitySensor06 (smo:proximitySensor06)
-
-AnnotationAssertion(sosa:observes smo:proximitySensor06 smo:proximityExhibit06)
-ClassAssertion(meso:ProxSensor smo:proximitySensor06)
-
-
-DLSafeRule(Body(BuiltInAtom(swrlb:equal Variable(<urn:swrl:var#numOfVisitorsNearExhibit>) "0"^^xsd:integer) DataPropertyAtom(meso:nearByVisitors Variable(<urn:swrl:var#observation>) Variable(<urn:swrl:var#numOfVisitorsNearExhibit>)))Head(ClassAtom(smo:NoSuggestedExhibitProximityObservation Variable(<urn:swrl:var#observation>))))
-DLSafeRule(Body(DataPropertyAtom(meso:nearByVisitors Variable(<urn:swrl:var#observation>) Variable(<urn:swrl:var#numOfVisitorsNearExhibit>)) BuiltInAtom(swrlb:greaterThan Variable(<urn:swrl:var#numOfVisitorsNearExhibit>) "1"^^xsd:integer))Head(ClassAtom(smo:SuggestedExhibitProximityObservation Variable(<urn:swrl:var#observation>))))
-DLSafeRule(Body(BuiltInAtom(swrlb:greaterThan Variable(<urn:swrl:var#humidity>) "55.0"^^xsd:decimal) DataPropertyAtom(sosa:hasSimpleResult Variable(<urn:swrl:var#observation>) Variable(<urn:swrl:var#humidity>)))Head(ClassAtom(smo:ActivateHumObservation Variable(<urn:swrl:var#observation>))))
-DLSafeRule(Body(DataPropertyAtom(sosa:hasSimpleResult Variable(<urn:swrl:var#observation>) Variable(<urn:swrl:var#temperature>)) BuiltInAtom(swrlb:lessThan Variable(<urn:swrl:var#temperature>) "18"^^xsd:integer))Head(ClassAtom(smo:ActivateHeatObservation Variable(<urn:swrl:var#observation>))))
-AnnotationAssertion(sosa:hosts meso:IoTmuseumPlatformLG <http://www.semanticweb.org/ntina/ontologies/2021/9/SmartMuseumOnto#LGhumSensor01>)
-)

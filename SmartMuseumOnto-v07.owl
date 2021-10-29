@@ -1,4 +1,4 @@
-Prefix(:=<http://www.semanticweb.org/ntina/ontologies/2021/9/untitled-ontology-16#>)
+Prefix(:=<http://i-lab.aegean.gr/kotis/Ontologies/SmartMuseumOnto/SmartMuseumOnto.owl#>)
 Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
 Prefix(td:=<https://www.w3.org/2019/wot/td#>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
@@ -6,8 +6,8 @@ Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(smo:=<http://i-lab.aegean.gr/kotis/Ontologies/SmartMuseumOnto/SmartMuseumOnto.owl#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
 Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
-Prefix(Meso:=<http://i-lab.aegean.gr/kotis/Ontologies/Meso/Meso.owl#>)
 Prefix(foaf:=<http://xmlns.com/foaf/0.1/>)
+Prefix(meso:=<http://i-lab.aegean.gr/kotis/Ontologies/Meso/Meso.owl#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Prefix(skos:=<http://www.w3.org/2004/02/skos/core#>)
 Prefix(sosa:=<http://www.w3.org/ns/sosa/>)
@@ -16,8 +16,6 @@ Prefix(vann:=<http://purl.org/vocab/vann/>)
 Prefix(swrlb:=<http://www.w3.org/2003/11/swrlb#>)
 Prefix(terms:=<http://purl.org/dc/terms/>)
 Prefix(schema:=<http://schema.org/>)
-Prefix(iot-trust:=<http://purl.org/IoT/iot-trust#>)
-Prefix(IoT-trustOnto:=<http://purl.org/IoT/IoT-trustOnto.owl#>)
 Prefix(IoT-trust-onto:=<http://i-lab.aegean.gr/kotis/Ontologies/IoT/IoT-trust-onto.owl#>)
 
 
@@ -26,6 +24,7 @@ Ontology(<http://i-lab.aegean.gr/kotis/Ontologies/SmartMuseumOnto/SmartMuseumOnt
 Import(<http://i-lab.aegean.gr/kotis/Ontologies/IoT/IoT-trust-onto-v06.owl>)
 Import(<http://i-lab.aegean.gr/kotis/Ontologies/Meso/Meso-v07.owl>)
 Import(<http://www.w3.org/ns/sosa/>)
+Import(<http://www.w3.org/ns/ssn/>)
 Annotation(terms:contributor "Kotis K.")
 Annotation(terms:creator "Zachila K.")
 Annotation(rdfs:comment "The aim of the ontology is to represent the knowledge related to a smart museum in order to fulfil the following objectives. The specific objectives of the ontology are: a) to represent the knowledge related to trustworthy IoT entities that deployed in smart cultural spaces i.e., things, sensors, actuators, people, data, applications b) to deal with the semantic interoperability and integration of \"smart\" museum applications and data c) to represent knowledge related to museum visits and visitors towards enhancing visiting experience d) to represent knowledge related to energy saving e) to represent knowledge related to the monitoring of environmental conditions in museums f) to represent knowledge related to the space and location of exhibits and collections")
@@ -166,80 +165,80 @@ SubClassOf(td:Thing <http://purl.org/IoT/iot#IoT-Entity>)
 #   Named Individuals
 ############################
 
-# Individual: Meso:SmartLamp1 (Meso:SmartLamp1)
+# Individual: meso:SmartLamp1 (meso:SmartLamp1)
 
-AnnotationAssertion(rdfs:comment Meso:SmartLamp1 "current status of the lamp (on|off)")
-ClassAssertion(IoT-trust-onto:TrustworthinessObject Meso:SmartLamp1)
-DataPropertyAssertion(IoT-trust-onto:hasTrustValue Meso:SmartLamp1 "0.7"^^xsd:decimal)
+AnnotationAssertion(rdfs:comment meso:SmartLamp1 "current status of the lamp (on|off)")
+ClassAssertion(IoT-trust-onto:TrustworthinessObject meso:SmartLamp1)
+DataPropertyAssertion(IoT-trust-onto:hasTrustValue meso:SmartLamp1 "0.7"^^xsd:decimal)
 
-# Individual: Meso:SmartLamp2 (Meso:SmartLamp2)
+# Individual: meso:SmartLamp2 (meso:SmartLamp2)
 
-AnnotationAssertion(rdfs:comment Meso:SmartLamp2 "current status of the lamp (on|off)")
-ClassAssertion(IoT-trust-onto:TrustworthinessObject Meso:SmartLamp2)
-DataPropertyAssertion(IoT-trust-onto:hasTrustValue Meso:SmartLamp2 "0.6"^^xsd:decimal)
+AnnotationAssertion(rdfs:comment meso:SmartLamp2 "current status of the lamp (on|off)")
+ClassAssertion(IoT-trust-onto:TrustworthinessObject meso:SmartLamp2)
+DataPropertyAssertion(IoT-trust-onto:hasTrustValue meso:SmartLamp2 "0.6"^^xsd:decimal)
 
-# Individual: Meso:SmartLamp3 (Meso:SmartLamp3)
+# Individual: meso:SmartLamp3 (meso:SmartLamp3)
 
-AnnotationAssertion(rdfs:comment Meso:SmartLamp3 "current status of the lamp (on|off)")
-DataPropertyAssertion(IoT-trust-onto:hasTrustValue Meso:SmartLamp3 "0.5"^^xsd:decimal)
+AnnotationAssertion(rdfs:comment meso:SmartLamp3 "current status of the lamp (on|off)")
+DataPropertyAssertion(IoT-trust-onto:hasTrustValue meso:SmartLamp3 "0.5"^^xsd:decimal)
 
-# Individual: Meso:SmartLamp4 (Meso:SmartLamp4)
+# Individual: meso:SmartLamp4 (meso:SmartLamp4)
 
-AnnotationAssertion(rdfs:comment Meso:SmartLamp4 "current status of the lamp (on|off)")
-ClassAssertion(IoT-trust-onto:TrustworthinessObject Meso:SmartLamp4)
-DataPropertyAssertion(IoT-trust-onto:hasTrustValue Meso:SmartLamp4 "0.7"^^xsd:decimal)
+AnnotationAssertion(rdfs:comment meso:SmartLamp4 "current status of the lamp (on|off)")
+ClassAssertion(IoT-trust-onto:TrustworthinessObject meso:SmartLamp4)
+DataPropertyAssertion(IoT-trust-onto:hasTrustValue meso:SmartLamp4 "0.7"^^xsd:decimal)
 
-# Individual: Meso:SmartLamp5 (Meso:SmartLamp5)
+# Individual: meso:SmartLamp5 (meso:SmartLamp5)
 
-AnnotationAssertion(rdfs:comment Meso:SmartLamp5 "current status of the lamp (on|off)")
-ClassAssertion(IoT-trust-onto:TrustworthinessObject Meso:SmartLamp5)
-DataPropertyAssertion(IoT-trust-onto:hasTrustValue Meso:SmartLamp5 "0.8"^^xsd:decimal)
+AnnotationAssertion(rdfs:comment meso:SmartLamp5 "current status of the lamp (on|off)")
+ClassAssertion(IoT-trust-onto:TrustworthinessObject meso:SmartLamp5)
+DataPropertyAssertion(IoT-trust-onto:hasTrustValue meso:SmartLamp5 "0.8"^^xsd:decimal)
 
-# Individual: Meso:SmartLamp6 (Meso:SmartLamp6)
+# Individual: meso:SmartLamp6 (meso:SmartLamp6)
 
-AnnotationAssertion(rdfs:comment Meso:SmartLamp6 "current status of the lamp (on|off)")
-DataPropertyAssertion(IoT-trust-onto:hasTrustValue Meso:SmartLamp6 "0.4"^^xsd:decimal)
+AnnotationAssertion(rdfs:comment meso:SmartLamp6 "current status of the lamp (on|off)")
+DataPropertyAssertion(IoT-trust-onto:hasTrustValue meso:SmartLamp6 "0.4"^^xsd:decimal)
 
-# Individual: Meso:SmartLamp7 (Meso:SmartLamp7)
+# Individual: meso:SmartLamp7 (meso:SmartLamp7)
 
-AnnotationAssertion(rdfs:comment Meso:SmartLamp7 "current status of the lamp (on|off)")
-ClassAssertion(IoT-trust-onto:TrustworthinessObject Meso:SmartLamp7)
-DataPropertyAssertion(IoT-trust-onto:hasTrustValue Meso:SmartLamp7 "0.6"^^xsd:decimal)
+AnnotationAssertion(rdfs:comment meso:SmartLamp7 "current status of the lamp (on|off)")
+ClassAssertion(IoT-trust-onto:TrustworthinessObject meso:SmartLamp7)
+DataPropertyAssertion(IoT-trust-onto:hasTrustValue meso:SmartLamp7 "0.6"^^xsd:decimal)
 
-# Individual: Meso:SmartLamp8 (Meso:SmartLamp8)
+# Individual: meso:SmartLamp8 (meso:SmartLamp8)
 
-AnnotationAssertion(rdfs:comment Meso:SmartLamp8 "current status of the lamp (on|off)")
-ClassAssertion(IoT-trust-onto:TrustworthinessObject Meso:SmartLamp8)
-DataPropertyAssertion(IoT-trust-onto:hasTrustValue Meso:SmartLamp8 "0.7"^^xsd:decimal)
+AnnotationAssertion(rdfs:comment meso:SmartLamp8 "current status of the lamp (on|off)")
+ClassAssertion(IoT-trust-onto:TrustworthinessObject meso:SmartLamp8)
+DataPropertyAssertion(IoT-trust-onto:hasTrustValue meso:SmartLamp8 "0.7"^^xsd:decimal)
 
-# Individual: Meso:UoAMuseumRoomA1 (Meso:UoAMuseumRoomA1)
+# Individual: meso:UoAMuseumRoomA1 (meso:UoAMuseumRoomA1)
 
-ClassAssertion(<http://purl.org/CONON#Context-Entity> Meso:UoAMuseumRoomA1)
+ClassAssertion(<http://purl.org/CONON#Context-Entity> meso:UoAMuseumRoomA1)
 
-# Individual: Meso:exhibitProximityObservation0001 (Meso:exhibitProximityObservation0001)
+# Individual: meso:exhibitProximityObservation0001 (meso:exhibitProximityObservation0001)
 
-DataPropertyAssertion(IoT-trust-onto:hasTrustValue Meso:exhibitProximityObservation0001 "0.7"^^xsd:decimal)
-DataPropertyAssertion(Meso:brighteningLevel Meso:exhibitProximityObservation0001 "Medium"^^xsd:string)
+DataPropertyAssertion(IoT-trust-onto:hasTrustValue meso:exhibitProximityObservation0001 "0.7"^^xsd:decimal)
+DataPropertyAssertion(meso:brighteningLevel meso:exhibitProximityObservation0001 "Medium"^^xsd:string)
 
-# Individual: Meso:exhibitProximityObservation0002 (Meso:exhibitProximityObservation0002)
+# Individual: meso:exhibitProximityObservation0002 (meso:exhibitProximityObservation0002)
 
-DataPropertyAssertion(IoT-trust-onto:hasTrustValue Meso:exhibitProximityObservation0002 "0.6"^^xsd:decimal)
+DataPropertyAssertion(IoT-trust-onto:hasTrustValue meso:exhibitProximityObservation0002 "0.6"^^xsd:decimal)
 
-# Individual: Meso:exhibitProximityObservation0003 (Meso:exhibitProximityObservation0003)
+# Individual: meso:exhibitProximityObservation0003 (meso:exhibitProximityObservation0003)
 
-DataPropertyAssertion(IoT-trust-onto:hasTrustValue Meso:exhibitProximityObservation0003 "0.5"^^xsd:decimal)
+DataPropertyAssertion(IoT-trust-onto:hasTrustValue meso:exhibitProximityObservation0003 "0.5"^^xsd:decimal)
 
-# Individual: Meso:exhibitProximityObservation0004 (Meso:exhibitProximityObservation0004)
+# Individual: meso:exhibitProximityObservation0004 (meso:exhibitProximityObservation0004)
 
-DataPropertyAssertion(IoT-trust-onto:hasTrustValue Meso:exhibitProximityObservation0004 "0.7"^^xsd:decimal)
+DataPropertyAssertion(IoT-trust-onto:hasTrustValue meso:exhibitProximityObservation0004 "0.7"^^xsd:decimal)
 
-# Individual: Meso:exhibitProximityObservation0005 (Meso:exhibitProximityObservation0005)
+# Individual: meso:exhibitProximityObservation0005 (meso:exhibitProximityObservation0005)
 
-DataPropertyAssertion(IoT-trust-onto:hasTrustValue Meso:exhibitProximityObservation0005 "0.4"^^xsd:decimal)
+DataPropertyAssertion(IoT-trust-onto:hasTrustValue meso:exhibitProximityObservation0005 "0.4"^^xsd:decimal)
 
-# Individual: Meso:exhibitProximityObservation0006 (Meso:exhibitProximityObservation0006)
+# Individual: meso:exhibitProximityObservation0006 (meso:exhibitProximityObservation0006)
 
-DataPropertyAssertion(IoT-trust-onto:hasTrustValue Meso:exhibitProximityObservation0006 "0.8"^^xsd:decimal)
+DataPropertyAssertion(IoT-trust-onto:hasTrustValue meso:exhibitProximityObservation0006 "0.8"^^xsd:decimal)
 
 # Individual: smo:LGhumSensor01 (smo:LGhumSensor01)
 
@@ -248,14 +247,14 @@ ObjectPropertyAssertion(sosa:observes smo:LGhumSensor01 smo:humidityInMuseumRoom
 
 # Individual: smo:exhibitProximityObservation0007 (smo:exhibitProximityObservation0007)
 
-AnnotationAssertion(sosa:hasFeatureOfInterest smo:exhibitProximityObservation0007 Meso:sculpture03)
+AnnotationAssertion(sosa:hasFeatureOfInterest smo:exhibitProximityObservation0007 meso:sculpture03)
 AnnotationAssertion(sosa:madeBySensor smo:exhibitProximityObservation0007 smo:proximitySensor06)
 AnnotationAssertion(sosa:observedProperty smo:exhibitProximityObservation0007 smo:proximityExhibit06)
-AnnotationAssertion(sosa:resultTime smo:exhibitProximityObservation0007 "2021-01-15T09:00:12Z"^^xsd:dateTime)
-ClassAssertion(Meso:ExhibitProximityObservation smo:exhibitProximityObservation0007)
+AnnotationAssertion(sosa:observedProperty smo:exhibitProximityObservation0007 "2021-01-15T09:00:12Z"^^xsd:dateTime)
+ClassAssertion(meso:ExhibitProximityObservation smo:exhibitProximityObservation0007)
 DataPropertyAssertion(IoT-trust-onto:hasTrustValue smo:exhibitProximityObservation0007 "0.6"^^xsd:decimal)
-DataPropertyAssertion(Meso:brighteningLevel smo:exhibitProximityObservation0007 "Medium")
-DataPropertyAssertion(Meso:nearByVisitors smo:exhibitProximityObservation0007 "0"^^xsd:integer)
+DataPropertyAssertion(meso:brighteningLevel smo:exhibitProximityObservation0007 "Medium")
+DataPropertyAssertion(meso:nearByVisitors smo:exhibitProximityObservation0007 "0"^^xsd:integer)
 
 # Individual: smo:humidityInMuseumRoom (smo:humidityInMuseumRoom)
 
@@ -264,7 +263,7 @@ ClassAssertion(smo:RoomHumidity smo:humidityInMuseumRoom)
 # Individual: smo:museumRoomHumObservation0001 (smo:museumRoomHumObservation0001)
 
 ClassAssertion(smo:MuseumRoomHumObservation smo:museumRoomHumObservation0001)
-ObjectPropertyAssertion(sosa:hasFeatureOfInterest smo:museumRoomHumObservation0001 Meso:UoAMuseumRoomA1)
+ObjectPropertyAssertion(sosa:hasFeatureOfInterest smo:museumRoomHumObservation0001 meso:UoAMuseumRoomA1)
 ObjectPropertyAssertion(sosa:madeBySensor smo:museumRoomHumObservation0001 smo:LGhumSensor01)
 ObjectPropertyAssertion(sosa:observedProperty smo:museumRoomHumObservation0001 smo:humidityInMuseumRoom)
 DataPropertyAssertion(sosa:hasSimpleResult smo:museumRoomHumObservation0001 "58.0"^^xsd:double)
@@ -273,7 +272,7 @@ DataPropertyAssertion(sosa:resultTime smo:museumRoomHumObservation0001 "2021-09-
 # Individual: smo:museumRoomHumObservation0002 (smo:museumRoomHumObservation0002)
 
 ClassAssertion(smo:MuseumRoomHumObservation smo:museumRoomHumObservation0002)
-ObjectPropertyAssertion(sosa:hasFeatureOfInterest smo:museumRoomHumObservation0002 Meso:UoAMuseumRoomA1)
+ObjectPropertyAssertion(sosa:hasFeatureOfInterest smo:museumRoomHumObservation0002 meso:UoAMuseumRoomA1)
 ObjectPropertyAssertion(sosa:madeBySensor smo:museumRoomHumObservation0002 smo:LGhumSensor01)
 ObjectPropertyAssertion(sosa:observedProperty smo:museumRoomHumObservation0002 smo:humidityInMuseumRoom)
 DataPropertyAssertion(sosa:hasSimpleResult smo:museumRoomHumObservation0002 "50.0"^^xsd:double)
@@ -282,7 +281,7 @@ DataPropertyAssertion(sosa:resultTime smo:museumRoomHumObservation0002 "2021-09-
 # Individual: smo:museumRoomHumObservation0003 (smo:museumRoomHumObservation0003)
 
 ClassAssertion(smo:MuseumRoomHumObservation smo:museumRoomHumObservation0003)
-ObjectPropertyAssertion(sosa:hasFeatureOfInterest smo:museumRoomHumObservation0003 Meso:UoAMuseumRoomA1)
+ObjectPropertyAssertion(sosa:hasFeatureOfInterest smo:museumRoomHumObservation0003 meso:UoAMuseumRoomA1)
 ObjectPropertyAssertion(sosa:madeBySensor smo:museumRoomHumObservation0003 smo:LGhumSensor01)
 ObjectPropertyAssertion(sosa:observedProperty smo:museumRoomHumObservation0003 smo:humidityInMuseumRoom)
 DataPropertyAssertion(sosa:hasSimpleResult smo:museumRoomHumObservation0003 "58.0"^^xsd:double)
@@ -291,7 +290,7 @@ DataPropertyAssertion(sosa:resultTime smo:museumRoomHumObservation0003 "2021-09-
 # Individual: smo:museumRoomHumObservation0004 (smo:museumRoomHumObservation0004)
 
 ClassAssertion(smo:MuseumRoomHumObservation smo:museumRoomHumObservation0004)
-ObjectPropertyAssertion(sosa:hasFeatureOfInterest smo:museumRoomHumObservation0004 Meso:UoAMuseumRoomA1)
+ObjectPropertyAssertion(sosa:hasFeatureOfInterest smo:museumRoomHumObservation0004 meso:UoAMuseumRoomA1)
 ObjectPropertyAssertion(sosa:madeBySensor smo:museumRoomHumObservation0004 smo:LGhumSensor01)
 ObjectPropertyAssertion(sosa:observedProperty smo:museumRoomHumObservation0004 smo:humidityInMuseumRoom)
 DataPropertyAssertion(sosa:hasSimpleResult smo:museumRoomHumObservation0004 "60.0"^^xsd:double)
@@ -299,17 +298,17 @@ DataPropertyAssertion(sosa:resultTime smo:museumRoomHumObservation0004 "2021-09-
 
 # Individual: smo:proximityExhibit06 (smo:proximityExhibit06)
 
-ClassAssertion(Meso:ExhibitProximity smo:proximityExhibit06)
+ClassAssertion(meso:ExhibitProximity smo:proximityExhibit06)
 
 # Individual: smo:proximitySensor06 (smo:proximitySensor06)
 
 AnnotationAssertion(sosa:observes smo:proximitySensor06 smo:proximityExhibit06)
-ClassAssertion(Meso:ProxSensor smo:proximitySensor06)
+ClassAssertion(meso:ProxSensor smo:proximitySensor06)
 
 
-DLSafeRule(Body(BuiltInAtom(swrlb:equal Variable(<urn:swrl:var#numOfVisitorsNearExhibit>) "0"^^xsd:integer) DataPropertyAtom(Meso:nearByVisitors Variable(<urn:swrl:var#observation>) Variable(<urn:swrl:var#numOfVisitorsNearExhibit>)))Head(ClassAtom(smo:NoSuggestedExhibitProximityObservation Variable(<urn:swrl:var#observation>))))
-DLSafeRule(Body(DataPropertyAtom(Meso:nearByVisitors Variable(<urn:swrl:var#observation>) Variable(<urn:swrl:var#numOfVisitorsNearExhibit>)) BuiltInAtom(swrlb:greaterThan Variable(<urn:swrl:var#numOfVisitorsNearExhibit>) "1"^^xsd:integer))Head(ClassAtom(smo:SuggestedExhibitProximityObservation Variable(<urn:swrl:var#observation>))))
+DLSafeRule(Body(BuiltInAtom(swrlb:equal Variable(<urn:swrl:var#numOfVisitorsNearExhibit>) "0"^^xsd:integer) DataPropertyAtom(meso:nearByVisitors Variable(<urn:swrl:var#observation>) Variable(<urn:swrl:var#numOfVisitorsNearExhibit>)))Head(ClassAtom(smo:NoSuggestedExhibitProximityObservation Variable(<urn:swrl:var#observation>))))
+DLSafeRule(Body(DataPropertyAtom(meso:nearByVisitors Variable(<urn:swrl:var#observation>) Variable(<urn:swrl:var#numOfVisitorsNearExhibit>)) BuiltInAtom(swrlb:greaterThan Variable(<urn:swrl:var#numOfVisitorsNearExhibit>) "1"^^xsd:integer))Head(ClassAtom(smo:SuggestedExhibitProximityObservation Variable(<urn:swrl:var#observation>))))
 DLSafeRule(Body(BuiltInAtom(swrlb:greaterThan Variable(<urn:swrl:var#humidity>) "55.0"^^xsd:decimal) DataPropertyAtom(sosa:hasSimpleResult Variable(<urn:swrl:var#observation>) Variable(<urn:swrl:var#humidity>)))Head(ClassAtom(smo:ActivateHumObservation Variable(<urn:swrl:var#observation>))))
 DLSafeRule(Body(DataPropertyAtom(sosa:hasSimpleResult Variable(<urn:swrl:var#observation>) Variable(<urn:swrl:var#temperature>)) BuiltInAtom(swrlb:lessThan Variable(<urn:swrl:var#temperature>) "18"^^xsd:integer))Head(ClassAtom(smo:ActivateHeatObservation Variable(<urn:swrl:var#observation>))))
-AnnotationAssertion(sosa:hosts Meso:IoTmuseumPlatformLG <http://www.semanticweb.org/ntina/ontologies/2021/9/SmartMuseumOnto#LGhumSensor01>)
+AnnotationAssertion(sosa:hosts meso:IoTmuseumPlatformLG <http://www.semanticweb.org/ntina/ontologies/2021/9/SmartMuseumOnto#LGhumSensor01>)
 )

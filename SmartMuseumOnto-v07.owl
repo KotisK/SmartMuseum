@@ -7,7 +7,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://i-lab.aegean.gr/kotis/Ontologies/SmartMuseumOnto/SmartMuseumOnto.owl"
      versionIRI="http://i-lab.aegean.gr/kotis/Ontologies/SmartMuseumOnto/SmartMuseumOnto-v07.owl">
-    <Prefix name="" IRI="http://i-lab.aegean.gr/kotis/Ontologies/SmartMuseumOnto/SmartMuseumOnto.owl#"/>
+    <Prefix name="" IRI="http://i-lab.aegean.gr/kotis/Ontologies/SmartMuseumOnto/SmartMuseumOnto.owl"/>
     <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
     <Prefix name="td" IRI="https://www.w3.org/2019/wot/td#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
@@ -25,7 +25,7 @@
     <Prefix name="swrlb" IRI="http://www.w3.org/2003/11/swrlb#"/>
     <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
     <Prefix name="schema" IRI="http://schema.org/"/>
-    <Prefix name="IoT-trust-onto" IRI="http://i-lab.aegean.gr/kotis/Ontologies/IoT/IoT-trust-onto.owl#"/>
+    <Prefix name="iottrust" IRI="http://i-lab.aegean.gr/kotis/Ontologies/IoT/IoT-trust-onto.owl#"/>
     <Import>http://i-lab.aegean.gr/kotis/Ontologies/IoT/IoT-trust-onto-v06.owl</Import>
     <Import>http://i-lab.aegean.gr/kotis/Ontologies/Meso/Meso-v07.owl</Import>
     <Import>http://www.w3.org/ns/sosa/</Import>
@@ -207,28 +207,33 @@
         <Class abbreviatedIRI="td:Thing"/>
         <Class IRI="http://purl.org/IoT/iot#IoT-Entity"/>
     </SubClassOf>
+    <DisjointClasses>
+        <Class abbreviatedIRI="meso:ProxSensor"/>
+        <Class abbreviatedIRI="meso:TempSensor"/>
+        <Class IRI="#HumSensor"/>
+    </DisjointClasses>
     <ClassAssertion>
-        <Class abbreviatedIRI="IoT-trust-onto:TrustworthinessObject"/>
+        <Class abbreviatedIRI="iottrust:TrustworthinessObject"/>
         <NamedIndividual abbreviatedIRI="meso:SmartLamp1"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="IoT-trust-onto:TrustworthinessObject"/>
+        <Class abbreviatedIRI="iottrust:TrustworthinessObject"/>
         <NamedIndividual abbreviatedIRI="meso:SmartLamp2"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="IoT-trust-onto:TrustworthinessObject"/>
+        <Class abbreviatedIRI="iottrust:TrustworthinessObject"/>
         <NamedIndividual abbreviatedIRI="meso:SmartLamp4"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="IoT-trust-onto:TrustworthinessObject"/>
+        <Class abbreviatedIRI="iottrust:TrustworthinessObject"/>
         <NamedIndividual abbreviatedIRI="meso:SmartLamp5"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="IoT-trust-onto:TrustworthinessObject"/>
+        <Class abbreviatedIRI="iottrust:TrustworthinessObject"/>
         <NamedIndividual abbreviatedIRI="meso:SmartLamp7"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="IoT-trust-onto:TrustworthinessObject"/>
+        <Class abbreviatedIRI="iottrust:TrustworthinessObject"/>
         <NamedIndividual abbreviatedIRI="meso:SmartLamp8"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -337,47 +342,47 @@
         <NamedIndividual IRI="#humidityInMuseumRoom"/>
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="IoT-trust-onto:hasTrustValue"/>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
         <NamedIndividual abbreviatedIRI="meso:SmartLamp1"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.7</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="IoT-trust-onto:hasTrustValue"/>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
         <NamedIndividual abbreviatedIRI="meso:SmartLamp2"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.6</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="IoT-trust-onto:hasTrustValue"/>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
         <NamedIndividual abbreviatedIRI="meso:SmartLamp3"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.5</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="IoT-trust-onto:hasTrustValue"/>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
         <NamedIndividual abbreviatedIRI="meso:SmartLamp4"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.7</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="IoT-trust-onto:hasTrustValue"/>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
         <NamedIndividual abbreviatedIRI="meso:SmartLamp5"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.8</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="IoT-trust-onto:hasTrustValue"/>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
         <NamedIndividual abbreviatedIRI="meso:SmartLamp6"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.4</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="IoT-trust-onto:hasTrustValue"/>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
         <NamedIndividual abbreviatedIRI="meso:SmartLamp7"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.6</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="IoT-trust-onto:hasTrustValue"/>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
         <NamedIndividual abbreviatedIRI="meso:SmartLamp8"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.7</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="IoT-trust-onto:hasTrustValue"/>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
         <NamedIndividual abbreviatedIRI="meso:exhibitProximityObservation0001"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.7</Literal>
     </DataPropertyAssertion>
@@ -387,32 +392,32 @@
         <Literal>Medium</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="IoT-trust-onto:hasTrustValue"/>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
         <NamedIndividual abbreviatedIRI="meso:exhibitProximityObservation0002"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.6</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="IoT-trust-onto:hasTrustValue"/>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
         <NamedIndividual abbreviatedIRI="meso:exhibitProximityObservation0003"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.5</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="IoT-trust-onto:hasTrustValue"/>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
         <NamedIndividual abbreviatedIRI="meso:exhibitProximityObservation0004"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.7</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="IoT-trust-onto:hasTrustValue"/>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
         <NamedIndividual abbreviatedIRI="meso:exhibitProximityObservation0005"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.4</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="IoT-trust-onto:hasTrustValue"/>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
         <NamedIndividual abbreviatedIRI="meso:exhibitProximityObservation0006"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.8</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="IoT-trust-onto:hasTrustValue"/>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
         <NamedIndividual IRI="#exhibitProximityObservation0007"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.6</Literal>
     </DataPropertyAssertion>

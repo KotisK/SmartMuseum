@@ -30,11 +30,11 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX geonames: <http://www.geonames.org/ontology#>
 PREFIX sosa:<http://www.w3.org/ns/sosa/>
-PREFIX ioT-trust-onto:<http://i-lab.aegean.gr/kotis/Ontologies/IoT/IoT-trust-onto.owl#>
+PREFIX iottrust:<http://i-lab.aegean.gr/kotis/Ontologies/IoT/IoT-trust-onto.owl#>
 PREFIX meso:<http://i-lab.aegean.gr/kotis/Ontologies/Meso/Meso.owl#>
 SELECT ?x
 WHERE {
-?x ioT-trust-onto:hasTrustValue 0.7.
+?x iottrust:hasTrustValue 0.7.
 ?x meso:lights meso:Painting01.
 }
 

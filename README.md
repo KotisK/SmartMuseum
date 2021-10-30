@@ -5,6 +5,9 @@ Nowadays, cultural spaces (e.g., museums, archaeological sites) are interested i
 
 Links:
 
-URI: https://i-lab.aegean.gr/kotis/Ontologies/SmartMuseum/SmartMuseumOnto
+IRI: http://i-lab.aegean.gr/kotis/Ontologies/SmartMuseumOnto/SmartMuseumOnto.owl
+
 OWL file (v07): https://i-lab.aegean.gr/kotis/Ontologies/SmartMuseum/SmartMuseumOnto-v07.owl
+
 HTML/LODE: https://i-lab.aegean.gr/kotis/Ontologies/SmartMuseum/Smart%20Museum%20Ontology.htm
+

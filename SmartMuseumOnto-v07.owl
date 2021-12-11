@@ -32,6 +32,10 @@
     <Import>http://www.w3.org/ns/ssn/</Import>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="terms:contributor"/>
+        <Literal>Paparidis E.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:creator"/>
         <Literal>Kotis K.</Literal>
     </Annotation>
     <Annotation>
@@ -40,11 +44,11 @@
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal>The aim of the ontology is to represent the knowledge related to a smart museum in order to fulfil the following objectives. The specific objectives of the ontology are: a) to represent the knowledge related to trustworthy IoT entities that deployed in smart cultural spaces i.e., things, sensors, actuators, people, data, applications b) to deal with the semantic interoperability and integration of &quot;smart&quot; museum applications and data c) to represent knowledge related to museum visits and visitors towards enhancing visiting experience d) to represent knowledge related to energy saving e) to represent knowledge related to the monitoring of environmental conditions in museums f) to represent knowledge related to the space and location of exhibits and collections</Literal>
+        <Literal>The aim of the ontology is to represent the knowledge related to a smart museum in order to fulfil the following objectives. The specific objectives of the ontology are: a) to represent the knowledge related to trustworthy IoT entities that deployed in smart cultural spaces i.e., things, sensors, actuators, people, data, applications b) to deal with the semantic interoperability and integration of &quot;smart&quot; museum applications and data c) to represent knowledge related to museum visits and visitors towards enhancing visiting experience d) to represent knowledge related to energy saving e) to represent knowledge related to the monitoring of environmental conditions in museums f) to represent knowledge related to the space and location of exhibits and collections.</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <Literal xml:lang="en">Smart Museum</Literal>
+        <Literal xml:lang="en">Smart Museum Ontology</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>

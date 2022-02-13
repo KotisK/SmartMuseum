@@ -1,3 +1,5 @@
+Diff from V.07
+
 -Comments and Labels added
 -New observations added
 -New SWRL rules added

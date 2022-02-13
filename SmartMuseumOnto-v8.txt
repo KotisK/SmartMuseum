@@ -1,0 +1,4 @@
+-Comments and Labels added
+-New observations added
+-New SWRL rules added
+-property hasTrustValue added

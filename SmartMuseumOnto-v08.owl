@@ -1,0 +1,1990 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://i-lab.aegean.gr/kotis/Ontologies/SmartMuseumOnto/SmartMuseumOnto.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://i-lab.aegean.gr/kotis/Ontologies/SmartMuseumOnto/SmartMuseumOnto.owl"
+     versionIRI="http://i-lab.aegean.gr/kotis/Ontologies/SmartMuseumOnto/SmartMuseumOnto-v08.owl">
+    <Prefix name="" IRI="http://i-lab.aegean.gr/kotis/Ontologies/SmartMuseumOnto/SmartMuseumOnto.owl"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="td" IRI="https://www.w3.org/2019/wot/td#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="smo" IRI="http://i-lab.aegean.gr/kotis/Ontologies/SmartMuseumOnto/SmartMuseumOnto.owl#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Prefix name="meso" IRI="http://i-lab.aegean.gr/kotis/Ontologies/Meso/Meso.owl#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
+    <Prefix name="sosa" IRI="http://www.w3.org/ns/sosa/"/>
+    <Prefix name="swrl" IRI="http://www.w3.org/2003/11/swrl#"/>
+    <Prefix name="vann" IRI="http://purl.org/vocab/vann/"/>
+    <Prefix name="swrlb" IRI="http://www.w3.org/2003/11/swrlb#"/>
+    <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
+    <Prefix name="schema" IRI="http://schema.org/"/>
+    <Prefix name="iottrust" IRI="http://i-lab.aegean.gr/kotis/Ontologies/IoT/IoT-trust-onto.owl#"/>
+    <Import>http://i-lab.aegean.gr/kotis/Ontologies/Meso/Meso-v07.owl</Import>
+    <Import>http://www.w3.org/ns/ssn/</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:contributor"/>
+        <Literal>Karaeleftheriou E.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:contributor"/>
+        <Literal>Paitatzis K.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:contributor"/>
+        <Literal>Paparidis E.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:creator"/>
+        <Literal>Kotis K.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:creator"/>
+        <Literal>Zachila K.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>The aim of the ontology is to represent the knowledge related to a smart museum in order to fulfil the following objectives. The specific objectives of the ontology are: a) to represent the knowledge related to trustworthy IoT entities that deployed in smart cultural spaces i.e., things, sensors, actuators, people, data, applications b) to deal with the semantic interoperability and integration of &quot;smart&quot; museum applications and data c) to represent knowledge related to museum visits and visitors towards enhancing visiting experience d) to represent knowledge related to energy saving e) to represent knowledge related to the monitoring of environmental conditions in museums f) to represent knowledge related to the space and location of exhibits and collections.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="en">Smart Museum Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal>version 0.8</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#ActivateHeatObservation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ActivateHumObservation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ActivateLamp"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ActivateTent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CurrentStateOfLamp"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CurrentStateOfTent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CurrentValueOfLight"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CurrentValueOfWindSpeed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DeactivateLamp"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DeactivateTent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dehumidifier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Heater"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HumSensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Humidity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IndoorHumidity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MuseumRoomHumObservation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NoSuggestedExhibitProximityObservation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OutdoorHumidity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RoomHumidity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SuggestedExhibitProximityObservation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TrustedObservations"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="td:Thing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ActuationLamp1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ActuationLamp2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ActuationTent1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ActuationTent2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ExternalLampCurrentState"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ExternalLampState"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ExternalSmartLamp001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ExternalTent001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LGhumSensor01"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LampActuator"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LampStatusSensor001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LightInLumens"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LightSensor001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NormalSunlightMeasure"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NormalWindMeasure"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ObservationLight1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ObservationLight2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ObservationStatusLamp1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ObservationStatusLamp2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ObservationStatusTent1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ObservationStatusTent2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ObservationWind1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ObservationWind2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PlatformLightModel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PlatformWindModel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SunLightStrengthOnWall001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TentActuator"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TentCurrentState"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TentState"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TentStatusSensor001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#WindSensor001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#WindSpeed"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#WindSpeedOnWall001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#exhibitProximityObservation0007"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#humidityInMuseumRoom"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#museumRoomHumObservation0001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#museumRoomHumObservation0002"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#museumRoomHumObservation0003"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#museumRoomHumObservation0004"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#proximityExhibit06"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#proximitySensor06"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="sosa:hasFeatureOfInterest"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="sosa:hasSimpleResult"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="sosa:hosts"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="sosa:madeBySensor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="sosa:observedProperty"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="sosa:observes"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="sosa:resultTime"/>
+    </Declaration>
+    <SubClassOf>
+        <Class abbreviatedIRI="meso:ExhibitProximity"/>
+        <Class abbreviatedIRI="sosa:ObservableProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="meso:ExhibitProximityObservation"/>
+        <Class abbreviatedIRI="sosa:Observation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="meso:ProxSensor"/>
+        <Class abbreviatedIRI="sosa:Sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="meso:TempSensor"/>
+        <Class abbreviatedIRI="sosa:Sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActivateHeatObservation"/>
+        <Class abbreviatedIRI="sosa:Observation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActivateHumObservation"/>
+        <Class abbreviatedIRI="sosa:Observation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActivateLamp"/>
+        <Class abbreviatedIRI="sosa:Actuation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActivateTent"/>
+        <Class abbreviatedIRI="sosa:Actuation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CurrentStateOfLamp"/>
+        <Class abbreviatedIRI="sosa:Observation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CurrentStateOfTent"/>
+        <Class abbreviatedIRI="sosa:Observation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CurrentValueOfLight"/>
+        <Class abbreviatedIRI="sosa:Observation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CurrentValueOfWindSpeed"/>
+        <Class abbreviatedIRI="sosa:Observation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DeactivateLamp"/>
+        <Class abbreviatedIRI="sosa:Actuation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DeactivateTent"/>
+        <Class abbreviatedIRI="sosa:Actuation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dehumidifier"/>
+        <Class abbreviatedIRI="td:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Heater"/>
+        <Class abbreviatedIRI="td:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HumSensor"/>
+        <Class abbreviatedIRI="sosa:Sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HumSensor"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="sosa:observes"/>
+            <Class IRI="#Humidity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Humidity"/>
+        <Class abbreviatedIRI="sosa:ObservableProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IndoorHumidity"/>
+        <Class IRI="#Humidity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MuseumRoomHumObservation"/>
+        <Class abbreviatedIRI="sosa:Observation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NoSuggestedExhibitProximityObservation"/>
+        <Class abbreviatedIRI="sosa:Observation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OutdoorHumidity"/>
+        <Class IRI="#Humidity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RoomHumidity"/>
+        <Class IRI="#IndoorHumidity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SuggestedExhibitProximityObservation"/>
+        <Class abbreviatedIRI="sosa:Observation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrustedObservations"/>
+        <Class abbreviatedIRI="sosa:Observation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://saref.etsi.org/saref4bldg/Lamp"/>
+        <Class abbreviatedIRI="td:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="td:Thing"/>
+        <Class IRI="http://purl.org/IoT/iot#IoT-Entity"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class abbreviatedIRI="meso:ProxSensor"/>
+        <Class abbreviatedIRI="meso:TempSensor"/>
+        <Class IRI="#HumSensor"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class abbreviatedIRI="iottrust:TrustworthinessObject"/>
+        <NamedIndividual abbreviatedIRI="meso:SmartLamp1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="iottrust:TrustworthinessObject"/>
+        <NamedIndividual abbreviatedIRI="meso:SmartLamp2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="iottrust:TrustworthinessObject"/>
+        <NamedIndividual abbreviatedIRI="meso:SmartLamp4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="iottrust:TrustworthinessObject"/>
+        <NamedIndividual abbreviatedIRI="meso:SmartLamp5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="iottrust:TrustworthinessObject"/>
+        <NamedIndividual abbreviatedIRI="meso:SmartLamp7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="iottrust:TrustworthinessObject"/>
+        <NamedIndividual abbreviatedIRI="meso:SmartLamp8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://purl.org/CONON#Context-Entity"/>
+        <NamedIndividual abbreviatedIRI="meso:UoAMuseumRoomA1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:Actuation"/>
+        <NamedIndividual IRI="#ActuationLamp1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:Actuation"/>
+        <NamedIndividual IRI="#ActuationLamp2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:Actuation"/>
+        <NamedIndividual IRI="#ActuationTent1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:Actuation"/>
+        <NamedIndividual IRI="#ActuationTent2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:ObservableProperty"/>
+        <NamedIndividual IRI="#ExternalLampCurrentState"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:ActuatableProperty"/>
+        <NamedIndividual IRI="#ExternalLampState"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:FeatureOfInterest"/>
+        <NamedIndividual IRI="#ExternalSmartLamp001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:FeatureOfInterest"/>
+        <NamedIndividual IRI="#ExternalTent001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#HumSensor"/>
+        <NamedIndividual IRI="#LGhumSensor01"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:Actuator"/>
+        <NamedIndividual IRI="#LampActuator"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:Sensor"/>
+        <NamedIndividual IRI="#LampStatusSensor001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:ObservableProperty"/>
+        <NamedIndividual IRI="#LightInLumens"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:Sensor"/>
+        <NamedIndividual IRI="#LightSensor001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:Procedure"/>
+        <NamedIndividual IRI="#NormalSunlightMeasure"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:Procedure"/>
+        <NamedIndividual IRI="#NormalWindMeasure"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CurrentValueOfLight"/>
+        <NamedIndividual IRI="#ObservationLight1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CurrentValueOfLight"/>
+        <NamedIndividual IRI="#ObservationLight2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CurrentStateOfLamp"/>
+        <NamedIndividual IRI="#ObservationStatusLamp1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CurrentStateOfLamp"/>
+        <NamedIndividual IRI="#ObservationStatusLamp2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CurrentStateOfTent"/>
+        <NamedIndividual IRI="#ObservationStatusTent1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CurrentStateOfTent"/>
+        <NamedIndividual IRI="#ObservationStatusTent2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CurrentValueOfWindSpeed"/>
+        <NamedIndividual IRI="#ObservationWind1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CurrentValueOfWindSpeed"/>
+        <NamedIndividual IRI="#ObservationWind2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:Platform"/>
+        <NamedIndividual IRI="#PlatformLightModel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:Platform"/>
+        <NamedIndividual IRI="#PlatformWindModel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:FeatureOfInterest"/>
+        <NamedIndividual IRI="#SunLightStrengthOnWall001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:Actuator"/>
+        <NamedIndividual IRI="#TentActuator"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:ObservableProperty"/>
+        <NamedIndividual IRI="#TentCurrentState"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:ActuatableProperty"/>
+        <NamedIndividual IRI="#TentState"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:Sensor"/>
+        <NamedIndividual IRI="#TentStatusSensor001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:Sensor"/>
+        <NamedIndividual IRI="#WindSensor001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:ObservableProperty"/>
+        <NamedIndividual IRI="#WindSpeed"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:FeatureOfInterest"/>
+        <NamedIndividual IRI="#WindSpeedOnWall001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="meso:ExhibitProximityObservation"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0007"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RoomHumidity"/>
+        <NamedIndividual IRI="#humidityInMuseumRoom"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MuseumRoomHumObservation"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MuseumRoomHumObservation"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MuseumRoomHumObservation"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0003"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MuseumRoomHumObservation"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0004"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="meso:ExhibitProximity"/>
+        <NamedIndividual IRI="#proximityExhibit06"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="meso:ProxSensor"/>
+        <NamedIndividual IRI="#proximitySensor06"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:actsOnProperty"/>
+        <NamedIndividual IRI="#ActuationLamp1"/>
+        <NamedIndividual IRI="#ExternalLampState"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasFeatureOfInterest"/>
+        <NamedIndividual IRI="#ActuationLamp1"/>
+        <NamedIndividual IRI="#ExternalSmartLamp001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeByActuator"/>
+        <NamedIndividual IRI="#ActuationLamp1"/>
+        <NamedIndividual IRI="#LampActuator"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:actsOnProperty"/>
+        <NamedIndividual IRI="#ActuationLamp2"/>
+        <NamedIndividual IRI="#ExternalLampState"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasFeatureOfInterest"/>
+        <NamedIndividual IRI="#ActuationLamp2"/>
+        <NamedIndividual IRI="#ExternalSmartLamp001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeByActuator"/>
+        <NamedIndividual IRI="#ActuationLamp2"/>
+        <NamedIndividual IRI="#LampActuator"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:actsOnProperty"/>
+        <NamedIndividual IRI="#ActuationTent1"/>
+        <NamedIndividual IRI="#TentState"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasFeatureOfInterest"/>
+        <NamedIndividual IRI="#ActuationTent1"/>
+        <NamedIndividual IRI="#ExternalTent001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeByActuator"/>
+        <NamedIndividual IRI="#ActuationTent1"/>
+        <NamedIndividual IRI="#TentActuator"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:actsOnProperty"/>
+        <NamedIndividual IRI="#ActuationTent2"/>
+        <NamedIndividual IRI="#TentState"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasFeatureOfInterest"/>
+        <NamedIndividual IRI="#ActuationTent2"/>
+        <NamedIndividual IRI="#ExternalTent001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeByActuator"/>
+        <NamedIndividual IRI="#ActuationTent2"/>
+        <NamedIndividual IRI="#TentActuator"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:observes"/>
+        <NamedIndividual IRI="#LGhumSensor01"/>
+        <NamedIndividual IRI="#humidityInMuseumRoom"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:isHostedBy"/>
+        <NamedIndividual IRI="#LampActuator"/>
+        <NamedIndividual IRI="#PlatformLightModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:usedProcedure"/>
+        <NamedIndividual IRI="#LightSensor001"/>
+        <NamedIndividual IRI="#NormalSunlightMeasure"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasFeatureOfInterest"/>
+        <NamedIndividual IRI="#ObservationLight1"/>
+        <NamedIndividual IRI="#SunLightStrengthOnWall001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeBySensor"/>
+        <NamedIndividual IRI="#ObservationLight1"/>
+        <NamedIndividual IRI="#LightSensor001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:observedProperty"/>
+        <NamedIndividual IRI="#ObservationLight1"/>
+        <NamedIndividual IRI="#LightInLumens"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasFeatureOfInterest"/>
+        <NamedIndividual IRI="#ObservationLight2"/>
+        <NamedIndividual IRI="#SunLightStrengthOnWall001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeBySensor"/>
+        <NamedIndividual IRI="#ObservationLight2"/>
+        <NamedIndividual IRI="#LightSensor001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:observedProperty"/>
+        <NamedIndividual IRI="#ObservationLight2"/>
+        <NamedIndividual IRI="#LightInLumens"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasFeatureOfInterest"/>
+        <NamedIndividual IRI="#ObservationStatusLamp1"/>
+        <NamedIndividual IRI="#ExternalSmartLamp001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeBySensor"/>
+        <NamedIndividual IRI="#ObservationStatusLamp1"/>
+        <NamedIndividual IRI="#LampStatusSensor001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:observedProperty"/>
+        <NamedIndividual IRI="#ObservationStatusLamp1"/>
+        <NamedIndividual IRI="#ExternalLampCurrentState"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasFeatureOfInterest"/>
+        <NamedIndividual IRI="#ObservationStatusLamp2"/>
+        <NamedIndividual IRI="#ExternalSmartLamp001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeBySensor"/>
+        <NamedIndividual IRI="#ObservationStatusLamp2"/>
+        <NamedIndividual IRI="#LampStatusSensor001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:observedProperty"/>
+        <NamedIndividual IRI="#ObservationStatusLamp2"/>
+        <NamedIndividual IRI="#ExternalLampCurrentState"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasFeatureOfInterest"/>
+        <NamedIndividual IRI="#ObservationStatusTent1"/>
+        <NamedIndividual IRI="#ExternalTent001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeBySensor"/>
+        <NamedIndividual IRI="#ObservationStatusTent1"/>
+        <NamedIndividual IRI="#TentStatusSensor001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:observedProperty"/>
+        <NamedIndividual IRI="#ObservationStatusTent1"/>
+        <NamedIndividual IRI="#TentCurrentState"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasFeatureOfInterest"/>
+        <NamedIndividual IRI="#ObservationStatusTent2"/>
+        <NamedIndividual IRI="#ExternalTent001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeBySensor"/>
+        <NamedIndividual IRI="#ObservationStatusTent2"/>
+        <NamedIndividual IRI="#TentStatusSensor001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:observedProperty"/>
+        <NamedIndividual IRI="#ObservationStatusTent2"/>
+        <NamedIndividual IRI="#TentCurrentState"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasFeatureOfInterest"/>
+        <NamedIndividual IRI="#ObservationWind1"/>
+        <NamedIndividual IRI="#WindSpeedOnWall001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeBySensor"/>
+        <NamedIndividual IRI="#ObservationWind1"/>
+        <NamedIndividual IRI="#WindSensor001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:observedProperty"/>
+        <NamedIndividual IRI="#ObservationWind1"/>
+        <NamedIndividual IRI="#WindSpeed"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasFeatureOfInterest"/>
+        <NamedIndividual IRI="#ObservationWind2"/>
+        <NamedIndividual IRI="#WindSpeedOnWall001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeBySensor"/>
+        <NamedIndividual IRI="#ObservationWind2"/>
+        <NamedIndividual IRI="#WindSensor001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:observedProperty"/>
+        <NamedIndividual IRI="#ObservationWind2"/>
+        <NamedIndividual IRI="#WindSpeed"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:isHostedBy"/>
+        <NamedIndividual IRI="#TentActuator"/>
+        <NamedIndividual IRI="#PlatformWindModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:usedProcedure"/>
+        <NamedIndividual IRI="#WindSensor001"/>
+        <NamedIndividual IRI="#NormalWindMeasure"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasFeatureOfInterest"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0001"/>
+        <NamedIndividual abbreviatedIRI="meso:UoAMuseumRoomA1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeBySensor"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0001"/>
+        <NamedIndividual IRI="#LGhumSensor01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:observedProperty"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0001"/>
+        <NamedIndividual IRI="#humidityInMuseumRoom"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasFeatureOfInterest"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0002"/>
+        <NamedIndividual abbreviatedIRI="meso:UoAMuseumRoomA1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeBySensor"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0002"/>
+        <NamedIndividual IRI="#LGhumSensor01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:observedProperty"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0002"/>
+        <NamedIndividual IRI="#humidityInMuseumRoom"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasFeatureOfInterest"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0003"/>
+        <NamedIndividual abbreviatedIRI="meso:UoAMuseumRoomA1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeBySensor"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0003"/>
+        <NamedIndividual IRI="#LGhumSensor01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:observedProperty"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0003"/>
+        <NamedIndividual IRI="#humidityInMuseumRoom"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:hasFeatureOfInterest"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0004"/>
+        <NamedIndividual abbreviatedIRI="meso:UoAMuseumRoomA1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:madeBySensor"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0004"/>
+        <NamedIndividual IRI="#LGhumSensor01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="sosa:observedProperty"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0004"/>
+        <NamedIndividual IRI="#humidityInMuseumRoom"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
+        <NamedIndividual abbreviatedIRI="meso:SmartLamp1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
+        <NamedIndividual abbreviatedIRI="meso:SmartLamp2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
+        <NamedIndividual abbreviatedIRI="meso:SmartLamp3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
+        <NamedIndividual abbreviatedIRI="meso:SmartLamp4"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
+        <NamedIndividual abbreviatedIRI="meso:SmartLamp5"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
+        <NamedIndividual abbreviatedIRI="meso:SmartLamp6"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
+        <NamedIndividual abbreviatedIRI="meso:SmartLamp7"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
+        <NamedIndividual abbreviatedIRI="meso:SmartLamp8"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
+        <NamedIndividual abbreviatedIRI="meso:exhibitProximityObservation0001"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="meso:brighteningLevel"/>
+        <NamedIndividual abbreviatedIRI="meso:exhibitProximityObservation0001"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
+        <NamedIndividual abbreviatedIRI="meso:exhibitProximityObservation0002"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
+        <NamedIndividual abbreviatedIRI="meso:exhibitProximityObservation0003"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
+        <NamedIndividual abbreviatedIRI="meso:exhibitProximityObservation0004"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
+        <NamedIndividual abbreviatedIRI="meso:exhibitProximityObservation0005"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
+        <NamedIndividual abbreviatedIRI="meso:exhibitProximityObservation0006"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:resultTime"/>
+        <NamedIndividual IRI="#ActuationLamp1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-10-26T07:32:52</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:resultTime"/>
+        <NamedIndividual IRI="#ActuationLamp2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-10-26T19:32:52</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:resultTime"/>
+        <NamedIndividual IRI="#ActuationTent1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-10-01T07:00:52</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:resultTime"/>
+        <NamedIndividual IRI="#ActuationTent2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-10-01T19:00:52</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
+        <NamedIndividual IRI="#ObservationLight1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:hasSimpleResult"/>
+        <NamedIndividual IRI="#ObservationLight1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">100.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:resultTime"/>
+        <NamedIndividual IRI="#ObservationLight1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-10-26T07:32:52</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
+        <NamedIndividual IRI="#ObservationLight2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:hasSimpleResult"/>
+        <NamedIndividual IRI="#ObservationLight2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">40.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:resultTime"/>
+        <NamedIndividual IRI="#ObservationLight2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-10-26T19:32:52</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
+        <NamedIndividual IRI="#ObservationStatusLamp1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:hasSimpleResult"/>
+        <NamedIndividual IRI="#ObservationStatusLamp1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:resultTime"/>
+        <NamedIndividual IRI="#ObservationStatusLamp1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-10-26T07:32:52</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
+        <NamedIndividual IRI="#ObservationStatusLamp2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:hasSimpleResult"/>
+        <NamedIndividual IRI="#ObservationStatusLamp2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:resultTime"/>
+        <NamedIndividual IRI="#ObservationStatusLamp2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-10-26T19:32:52</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
+        <NamedIndividual IRI="#ObservationStatusTent1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:hasSimpleResult"/>
+        <NamedIndividual IRI="#ObservationStatusTent1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:resultTime"/>
+        <NamedIndividual IRI="#ObservationStatusTent1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-10-01T07:00:52</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
+        <NamedIndividual IRI="#ObservationStatusTent2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:hasSimpleResult"/>
+        <NamedIndividual IRI="#ObservationStatusTent2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:resultTime"/>
+        <NamedIndividual IRI="#ObservationStatusTent2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-10-01T19:00:52</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
+        <NamedIndividual IRI="#ObservationWind1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:hasSimpleResult"/>
+        <NamedIndividual IRI="#ObservationWind1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">50.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:resultTime"/>
+        <NamedIndividual IRI="#ObservationWind1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-10-01T07:00:52</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
+        <NamedIndividual IRI="#ObservationWind2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:hasSimpleResult"/>
+        <NamedIndividual IRI="#ObservationWind2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">100.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:resultTime"/>
+        <NamedIndividual IRI="#ObservationWind2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-10-01T19:00:52</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0007"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="meso:brighteningLevel"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0007"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="meso:nearByVisitors"/>
+        <NamedIndividual IRI="#exhibitProximityObservation0007"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:hasSimpleResult"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0001"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">58.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:resultTime"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0001"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-09T11:00:12Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:hasSimpleResult"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0002"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">50.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:resultTime"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0002"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-10T11:00:12Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:hasSimpleResult"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0003"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">58.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:resultTime"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0003"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-11T11:00:12Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:hasSimpleResult"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0004"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">60.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="sosa:resultTime"/>
+        <NamedIndividual IRI="#museumRoomHumObservation0004"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-11T11:00:12Z</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="sosa:hasSample"/>
+        <ObjectProperty abbreviatedIRI="sosa:hasResult"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="sosa:madeObservation"/>
+        <ObjectProperty abbreviatedIRI="sosa:madeBySensor"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="sosa:phenomenonTime"/>
+        <ObjectProperty abbreviatedIRI="sosa:isResultOf"/>
+    </SubObjectPropertyOf>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class abbreviatedIRI="sosa:Actuation"/>
+                <Variable IRI="urn:swrl:var#change_lamp_state"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#CurrentStateOfLamp"/>
+                <Variable IRI="urn:swrl:var#obs_lamp_state"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#CurrentValueOfLight"/>
+                <Variable IRI="urn:swrl:var#obs_light_value"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="sosa:hasSimpleResult"/>
+                <Variable IRI="urn:swrl:var#obs_lamp_state"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="sosa:hasSimpleResult"/>
+                <Variable IRI="urn:swrl:var#obs_light_value"/>
+                <Variable IRI="urn:swrl:var#current_light"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:lessThan">
+                <Variable IRI="urn:swrl:var#current_light"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">50</Literal>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="sosa:resultTime"/>
+                <Variable IRI="urn:swrl:var#obs_lamp_state"/>
+                <Variable IRI="urn:swrl:var#date_time1"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="sosa:resultTime"/>
+                <Variable IRI="urn:swrl:var#obs_light_value"/>
+                <Variable IRI="urn:swrl:var#date_time2"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:equal">
+                <Variable IRI="urn:swrl:var#date_time1"/>
+                <Variable IRI="urn:swrl:var#date_time2"/>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="sosa:resultTime"/>
+                <Variable IRI="urn:swrl:var#change_lamp_state"/>
+                <Variable IRI="urn:swrl:var#date_time3"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:equal">
+                <Variable IRI="urn:swrl:var#date_time1"/>
+                <Variable IRI="urn:swrl:var#date_time3"/>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
+                <Variable IRI="urn:swrl:var#obs_lamp_state"/>
+                <Variable IRI="urn:swrl:var#trustValue"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:greaterThan">
+                <Variable IRI="urn:swrl:var#trustValue"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.5</Literal>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
+                <Variable IRI="urn:swrl:var#obs_light_value"/>
+                <Variable IRI="urn:swrl:var#trustValue"/>
+            </DataPropertyAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#ActivateLamp"/>
+                <Variable IRI="urn:swrl:var#change_lamp_state"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="sosa:hasSimpleResult"/>
+                <Variable IRI="urn:swrl:var#change_lamp_state"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class abbreviatedIRI="sosa:Actuation"/>
+                <Variable IRI="urn:swrl:var#change_lamp_state"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#CurrentStateOfLamp"/>
+                <Variable IRI="urn:swrl:var#obs_lamp_state"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#CurrentValueOfLight"/>
+                <Variable IRI="urn:swrl:var#obs_light_value"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="sosa:hasSimpleResult"/>
+                <Variable IRI="urn:swrl:var#obs_lamp_state"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="sosa:hasSimpleResult"/>
+                <Variable IRI="urn:swrl:var#obs_light_value"/>
+                <Variable IRI="urn:swrl:var#current_light"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:greaterThanOrEqual">
+                <Variable IRI="urn:swrl:var#current_light"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">50</Literal>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="sosa:resultTime"/>
+                <Variable IRI="urn:swrl:var#obs_lamp_state"/>
+                <Variable IRI="urn:swrl:var#date_time1"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="sosa:resultTime"/>
+                <Variable IRI="urn:swrl:var#obs_light_value"/>
+                <Variable IRI="urn:swrl:var#date_time2"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:equal">
+                <Variable IRI="urn:swrl:var#date_time1"/>
+                <Variable IRI="urn:swrl:var#date_time2"/>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="sosa:resultTime"/>
+                <Variable IRI="urn:swrl:var#change_lamp_state"/>
+                <Variable IRI="urn:swrl:var#date_time3"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:equal">
+                <Variable IRI="urn:swrl:var#date_time1"/>
+                <Variable IRI="urn:swrl:var#date_time3"/>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
+                <Variable IRI="urn:swrl:var#obs_lamp_state"/>
+                <Variable IRI="urn:swrl:var#trustValue"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:greaterThan">
+                <Variable IRI="urn:swrl:var#trustValue"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.5</Literal>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
+                <Variable IRI="urn:swrl:var#obs_light_value"/>
+                <Variable IRI="urn:swrl:var#trustValue"/>
+            </DataPropertyAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#DeactivateLamp"/>
+                <Variable IRI="urn:swrl:var#change_lamp_state"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="sosa:hasSimpleResult"/>
+                <Variable IRI="urn:swrl:var#change_lamp_state"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class abbreviatedIRI="sosa:Actuation"/>
+                <Variable IRI="urn:swrl:var#change_tent_state"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#CurrentStateOfTent"/>
+                <Variable IRI="urn:swrl:var#obs_tent_state"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#CurrentValueOfWindSpeed"/>
+                <Variable IRI="urn:swrl:var#obs_wind_speed"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="sosa:hasSimpleResult"/>
+                <Variable IRI="urn:swrl:var#obs_tent_state"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="sosa:hasSimpleResult"/>
+                <Variable IRI="urn:swrl:var#obs_wind_speed"/>
+                <Variable IRI="urn:swrl:var#current_speed"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:lessThan">
+                <Variable IRI="urn:swrl:var#current_speed"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">100</Literal>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="sosa:resultTime"/>
+                <Variable IRI="urn:swrl:var#obs_tent_state"/>
+                <Variable IRI="urn:swrl:var#date_time1"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="sosa:resultTime"/>
+                <Variable IRI="urn:swrl:var#obs_wind_speed"/>
+                <Variable IRI="urn:swrl:var#date_time2"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:equal">
+                <Variable IRI="urn:swrl:var#date_time1"/>
+                <Variable IRI="urn:swrl:var#date_time2"/>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="sosa:resultTime"/>
+                <Variable IRI="urn:swrl:var#change_tent_state"/>
+                <Variable IRI="urn:swrl:var#date_time3"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:equal">
+                <Variable IRI="urn:swrl:var#date_time1"/>
+                <Variable IRI="urn:swrl:var#date_time3"/>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
+                <Variable IRI="urn:swrl:var#obs_tent_state"/>
+                <Variable IRI="urn:swrl:var#trustValue"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:greaterThan">
+                <Variable IRI="urn:swrl:var#trustValue"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.5</Literal>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
+                <Variable IRI="urn:swrl:var#obs_wind_speed"/>
+                <Variable IRI="urn:swrl:var#trustValue"/>
+            </DataPropertyAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#ActivateTent"/>
+                <Variable IRI="urn:swrl:var#change_tent_state"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="sosa:hasSimpleResult"/>
+                <Variable IRI="urn:swrl:var#change_tent_state"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class abbreviatedIRI="sosa:Actuation"/>
+                <Variable IRI="urn:swrl:var#change_tent_state"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#CurrentStateOfTent"/>
+                <Variable IRI="urn:swrl:var#obs_tent_state"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#CurrentValueOfWindSpeed"/>
+                <Variable IRI="urn:swrl:var#obs_wind_speed"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="sosa:hasSimpleResult"/>
+                <Variable IRI="urn:swrl:var#obs_tent_state"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="sosa:hasSimpleResult"/>
+                <Variable IRI="urn:swrl:var#obs_wind_speed"/>
+                <Variable IRI="urn:swrl:var#current_speed"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:greaterThanOrEqual">
+                <Variable IRI="urn:swrl:var#current_speed"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">100</Literal>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="sosa:resultTime"/>
+                <Variable IRI="urn:swrl:var#obs_tent_state"/>
+                <Variable IRI="urn:swrl:var#date_time1"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="sosa:resultTime"/>
+                <Variable IRI="urn:swrl:var#obs_wind_speed"/>
+                <Variable IRI="urn:swrl:var#date_time2"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:equal">
+                <Variable IRI="urn:swrl:var#date_time1"/>
+                <Variable IRI="urn:swrl:var#date_time2"/>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="sosa:resultTime"/>
+                <Variable IRI="urn:swrl:var#change_tent_state"/>
+                <Variable IRI="urn:swrl:var#date_time3"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:equal">
+                <Variable IRI="urn:swrl:var#date_time1"/>
+                <Variable IRI="urn:swrl:var#date_time3"/>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
+                <Variable IRI="urn:swrl:var#obs_tent_state"/>
+                <Variable IRI="urn:swrl:var#trustValue"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:greaterThan">
+                <Variable IRI="urn:swrl:var#trustValue"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.5</Literal>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="iottrust:hasTrustValue"/>
+                <Variable IRI="urn:swrl:var#obs_wind_speed"/>
+                <Variable IRI="urn:swrl:var#trustValue"/>
+            </DataPropertyAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#DeactivateTent"/>
+                <Variable IRI="urn:swrl:var#change_tent_state"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="sosa:hasSimpleResult"/>
+                <Variable IRI="urn:swrl:var#change_tent_state"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="meso:nearByVisitors"/>
+                <Variable IRI="urn:swrl:var#observation"/>
+                <Variable IRI="urn:swrl:var#numOfVisitorsNearExhibit"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:equal">
+                <Variable IRI="urn:swrl:var#numOfVisitorsNearExhibit"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#NoSuggestedExhibitProximityObservation"/>
+                <Variable IRI="urn:swrl:var#observation"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <BuiltInAtom abbreviatedIRI="swrlb:greaterThan">
+                <Variable IRI="urn:swrl:var#numOfVisitorsNearExhibit"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="meso:nearByVisitors"/>
+                <Variable IRI="urn:swrl:var#observation"/>
+                <Variable IRI="urn:swrl:var#numOfVisitorsNearExhibit"/>
+            </DataPropertyAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#SuggestedExhibitProximityObservation"/>
+                <Variable IRI="urn:swrl:var#observation"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="sosa:hasSimpleResult"/>
+                <Variable IRI="urn:swrl:var#observation"/>
+                <Variable IRI="urn:swrl:var#humidity"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:greaterThan">
+                <Variable IRI="urn:swrl:var#humidity"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">55.0</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#ActivateHumObservation"/>
+                <Variable IRI="urn:swrl:var#observation"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <BuiltInAtom abbreviatedIRI="swrlb:lessThan">
+                <Variable IRI="urn:swrl:var#temperature"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">18</Literal>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="sosa:hasSimpleResult"/>
+                <Variable IRI="urn:swrl:var#observation"/>
+                <Variable IRI="urn:swrl:var#temperature"/>
+            </DataPropertyAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#ActivateHeatObservation"/>
+                <Variable IRI="urn:swrl:var#observation"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>iottrust:hasTrustValue</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Represents the value of trustworthiness of an entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>meso:Exhibit</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Represents the paint- ings and sculptures that are hosted  in a museum</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>meso:Exhibit</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Exhibit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>meso:ExhibitProximity</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Represents the proximity  between  an exhibit  and a visitor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>meso:ExhibitProximity</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">ExhibitProximity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>meso:ExhibitProximityObservation</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Represents  the observations of the proximity  between  an exhibit  and a visitor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>meso:ExhibitProximityObservation</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">ExhibitProximityObservation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>meso:Exhibit_painting</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Exhibit_painting</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>meso:Exhibit_sculpture</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Exhibit_sculpture</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>meso:IndoorTemperature</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">IndoorTemperature</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>meso:InterestingExhibitProximityObservation</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Represents the interesting exhibits</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>meso:InterestingExhibitProximityObservation</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">InterestingExhibitProximityObservation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sosa:hosts"/>
+        <AbbreviatedIRI>meso:IoTmuseumPlatformLG</AbbreviatedIRI>
+        <IRI>http://www.semanticweb.org/ntina/ontologies/2021/9/SmartMuseumOnto#LGhumSensor01</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>meso:Museum</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Museum</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>meso:MuseumRoom</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">MuseumRoom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>meso:MuseumRoomTempObservation</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">represents the observations of the temperature of a room in a museum</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>meso:MuseumRoomTempObservation</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">MuseumRoomTempObservation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>meso:MuseumVisit</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Represents the visits of visitors in the museum</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>meso:MuseumVisit</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Visit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>meso:ObservationToHighLevelEnergy</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Represents  the observations result  in turning up the light of an exhibit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>meso:ObservationToHighLevelEnergy</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">ObservationToHighLevelEnergy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>meso:ObservationToLowLevelEnergy</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">ObservationToLowLevelEnergy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>meso:OutdoorTemperature</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">OutdoorTemperature</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>meso:ProxSensor</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">ProxSensor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>meso:Proximity</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Proximity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>meso:Room</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Room</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>meso:RoomTemperature</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">RoomTemperature</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>meso:SmartLamp</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">represents the  lamps brightening the exhibits</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>meso:SmartLamp</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">SmartLamp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>meso:SmartLamp1</AbbreviatedIRI>
+        <Literal>current status of the lamp (on|off)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>meso:SmartLamp2</AbbreviatedIRI>
+        <Literal>current status of the lamp (on|off)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>meso:SmartLamp3</AbbreviatedIRI>
+        <Literal>current status of the lamp (on|off)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>meso:SmartLamp4</AbbreviatedIRI>
+        <Literal>current status of the lamp (on|off)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>meso:SmartLamp5</AbbreviatedIRI>
+        <Literal>current status of the lamp (on|off)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>meso:SmartLamp6</AbbreviatedIRI>
+        <Literal>current status of the lamp (on|off)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>meso:SmartLamp7</AbbreviatedIRI>
+        <Literal>current status of the lamp (on|off)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>meso:SmartLamp8</AbbreviatedIRI>
+        <Literal>current status of the lamp (on|off)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>meso:TempSensor</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">TempSensor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>meso:Temperature</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Temperature</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>meso:Tourist</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Tourist</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>meso:VIP_visitor</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">VIP_visitor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>meso:brighteningLevel</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">brighteningLevel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>meso:brighteningLevel</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">represents the  brightening level (Low,  Medium, High) of a meso:SmartLamp that meso:lights an meso:Exhibit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>meso:lights</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">represents the relation  linking a meso:SmartLamp to an meso:Exhibit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>meso:lights</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">lights</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>meso:nearByVisitors</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">nearByVisitors</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>meso:nearByVisitors</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">subproperty of geonames:nearby, represents the number of visitors  (cross:Visitor) close to an meso:Exhibit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>meso:visits</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Represents the action  of a meso:Visitor  that visits a meso:MuseumRoom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>meso:visits</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">visits</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#ActivateHeatObservation</IRI>
+        <Literal>Zachila K.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ActivateHeatObservation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Represents the observations result in turning up the heating device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ActivateHeatObservation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">ActivateHeatObservation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#ActivateHumObservation</IRI>
+        <Literal>Zachila K.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ActivateHumObservation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Represents the observations result in turning up the dehumidiﬁer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ActivateHumObservation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">ActivateHumObservation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ActivateLamp</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">ActivateLamp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ActivateTent</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">ActivateTent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CurrentStateOfLamp</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">CurrentStateOfLamp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CurrentStateOfTent</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">CurrentStateOfTent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CurrentValueOfLight</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">CurrentValueOfLight</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CurrentValueOfWindSpeed</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">CurrentValueOfWindSpeed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DeactivateLamp</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">DeactivateLamp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DeactivateTent</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">DeactivateTent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#Dehumidifier</IRI>
+        <Literal>Zachila K.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Dehumidifier</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Dehumidifier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#Heater</IRI>
+        <Literal>Zachila K.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Heater</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Heater</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#HumSensor</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">HumSensor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#Humidity</IRI>
+        <Literal>Zachila K.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Humidity</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Represents the humidity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Humidity</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Humidity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#IndoorHumidity</IRI>
+        <Literal>Zachila K.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#IndoorHumidity</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">IndoorHumidity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MuseumRoomHumObservation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Represents the observations of the humidity of a room in a museum</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MuseumRoomHumObservation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">MuseumRoomHumObservation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NoSuggestedExhibitProximityObservation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Represents the non suggested exhibits</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NoSuggestedExhibitProximityObservation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">NoSuggestedExhibitProximityObservation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NormalWindMeasure</IRI>
+        <Literal>Standard height for anemometers above ground, typically 10m for meteorological measures and 2m in Agrometeorology</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#OutdoorHumidity</IRI>
+        <Literal>Zachila K.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OutdoorHumidity</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">OutdoorHumidity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#RoomHumidity</IRI>
+        <Literal>Zachila K.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RoomHumidity</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">RoomHumidity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SuggestedExhibitProximityObservation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Represents the suggested exhibits</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SuggestedExhibitProximityObservation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">SuggestedExhibitProximityObservation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TrustedObservations</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Represents the observations of trusted IoT entities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TrustedObservations</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">TrustedObservations</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sosa:hasFeatureOfInterest"/>
+        <IRI>#exhibitProximityObservation0007</IRI>
+        <AbbreviatedIRI>meso:sculpture03</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sosa:madeBySensor"/>
+        <IRI>#exhibitProximityObservation0007</IRI>
+        <IRI>#proximitySensor06</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sosa:observedProperty"/>
+        <IRI>#exhibitProximityObservation0007</IRI>
+        <IRI>#proximityExhibit06</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sosa:observedProperty"/>
+        <IRI>#exhibitProximityObservation0007</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-01-15T09:00:12Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sosa:observes"/>
+        <IRI>#proximitySensor06</IRI>
+        <IRI>#proximityExhibit06</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>td:Thing</AbbreviatedIRI>
+        <Literal xml:lang="en">Fom W3C WoT TD vocabulary
+
+https://www.w3.org/2019/wot/td#classes
+IRI: https://www.w3.org/2019/wot/td#Thing
+
+An abstraction of a physical or a virtual entity whose metadata and interfaces are described by a WoT Thing Description, whereas a virtual entity is the composition of one or more Things.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

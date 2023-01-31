@@ -11,3 +11,5 @@ OWL file (v07): https://i-lab.aegean.gr/kotis/Ontologies/SmartMuseum/SmartMuseum
 
 HTML/LODE: https://i-lab.aegean.gr/kotis/Ontologies/SmartMuseum/Smart%20Museum%20Ontology.htm
 
+This work is presented at https://www.mdpi.com/2624-831X/2/4/37:
+Zachila, K.; Kotis, K.; Paparidis, E.; Ladikou, S.; Spiliotopoulos, D. Facilitating Semantic Interoperability of Trustworthy IoT Entities in Cultural Spaces: The Smart Museum Ontology. IoT 2021, 2, 741-760. https://doi.org/10.3390/iot2040037 
